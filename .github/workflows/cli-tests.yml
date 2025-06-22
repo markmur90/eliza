@@ -1,0 +1,132 @@
+name: Eliza CLI Tests
+
+# Cancel previous runs for the same PR/branch
+concurrency:
+  group: cli-tests-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+env:
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+  ELIZA_NONINTERACTIVE: true
+
+on:
+  push:
+    branches:
+      - 'main'
+      - 'develop'
+  pull_request:
+    branches:
+      - 'main'
+      - 'develop'
+
+jobs:
+  test:
+    # Skip duplicate runs: run on push to main/develop, or on pull_request events only
+    if: github.event_name == 'pull_request' || (github.event_name == 'push' && contains(fromJson('["main", "develop"]'), github.ref_name))
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 23
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Mention Bun version
+        run: bun --version
+
+      - name: Debug Bun Setup
+        shell: bash
+        run: |
+          echo "PATH: $PATH"
+          echo "which bun: $(which bun 2>/dev/null || echo 'which not found')"
+          echo "command -v bun: $(command -v bun 2>/dev/null || echo 'command not found')"
+          if command -v bun &> /dev/null; then
+            BUN_PATH=$(which bun 2>/dev/null || command -v bun)
+            echo "Bun found at: $BUN_PATH"
+            ls -la "$BUN_PATH" 2>/dev/null || echo "Failed to ls bun"
+            file "$BUN_PATH" 2>/dev/null || echo "Failed to get bun file info"
+          else
+            echo "Bun not found in PATH"
+          fi
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Build all packages
+        run: bun run build
+
+      - name: Verify CLI build artifacts
+        shell: bash
+        run: |
+          echo "Checking CLI build artifacts..."
+          echo "CLI dist contents:"
+          ls -la packages/cli/dist/ || echo "ERROR: No dist directory"
+          echo ""
+          echo "CLI templates in dist:"
+          ls -la packages/cli/dist/templates/ || echo "ERROR: No templates in dist"
+          echo ""
+          echo "CLI executable:"
+          test -f packages/cli/dist/index.js && echo "✓ CLI index.js exists" || echo "ERROR: CLI index.js missing"
+
+      - name: Clean eliza projects cache
+        shell: bash
+        run: rm -rf ~/.eliza/projects
+
+      - name: Create .env file for tests
+        shell: bash
+        run: |
+          echo "OPENAI_API_KEY=$OPENAI_API_KEY" > .env
+          echo "LOG_LEVEL=info" >> .env
+
+      - name: Download models
+        shell: bash
+        run: |
+          MODEL_DIR="$HOME/.eliza/models"
+          mkdir -p "$MODEL_DIR"
+          declare -a models=(
+            "DeepHermes-3-Llama-3-3B-Preview-q4.gguf https://huggingface.co/NousResearch/DeepHermes-3-Llama-3-3B-Preview-GGUF/resolve/main/DeepHermes-3-Llama-3-3B-Preview-q4.gguf"
+            "bge-small-en-v1.5.Q4_K_M.gguf https://huggingface.co/ChristianAzinn/bge-small-en-v1.5-gguf/resolve/main/bge-small-en-v1.5.Q4_K_M.gguf"
+          )
+          for entry in "${models[@]}"; do
+            name="${entry%% *}"
+            url="${entry#* }"
+            path="$MODEL_DIR/$name"
+            if [ ! -f "$path" ]; then
+              echo "Downloading $name..."
+              start=$(date +%s)
+              curl -L -f -sS -o "$path" "$url"
+              status=$?
+              end=$(date +%s)
+              duration=$((end - start))
+              if [ $status -eq 0 ]; then
+                echo "Downloaded $name in ${duration}s."
+              else
+                echo "Failed to download $name after ${duration}s."
+                exit 1
+              fi
+            else
+              echo "$name already exists, skipping."
+            fi
+          done
+
+      - name: Run CLI TypeScript tests
+        timeout-minutes: 15
+        run: bun run test:cli
+        working-directory: packages/cli
+        env:
+          ELIZA_TEST_MODE: true
+          NODE_OPTIONS: --max-old-space-size=4096

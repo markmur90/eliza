@@ -8,14 +8,11 @@ And plugins for virtually everything.
 
 Here is the source code for a plugin, complete with elizaos tests:
 
-```
 Project Path: packages/plugin-local-ai/src
 
 Source Tree:
 
-```
-
-src
+```src
 ├── environment.ts
 ├── utils
 │ ├── ttsManager.ts
@@ -27,8 +24,7 @@ src
 │ └── downloadManager.ts
 ├── types.ts
 └── index.ts
-
-````
+```
 
 `/Users/shawwalters/eliza/packages/plugin-local-ai/src/environment.ts`:
 
@@ -112,8 +108,7 @@ export function validateConfig(): Config {
     throw error;
   }
 }
-
-````
+```
 
 `/Users/shawwalters/eliza/packages/plugin-local-ai/src/utils/ttsManager.ts`:
 

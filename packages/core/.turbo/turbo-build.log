@@ -1,0 +1,46 @@
+
+[0m[2m[35m$[0m [2m[1mtsup[0m
+[34mCLI[39m Building entry: src/index.ts, src/specs/v1/actionExample.ts, src/specs/v1/index.ts, src/specs/v1/messages.ts, src/specs/v1/posts.ts, src/specs/v1/provider.ts, src/specs/v1/runtime.ts, src/specs/v1/state.ts, src/specs/v1/templates.ts, src/specs/v1/types.ts, src/specs/v1/uuid.ts, src/specs/v2/index.ts
+[34mCLI[39m Using tsconfig: tsconfig.build.json
+[34mCLI[39m tsup v8.5.0
+[34mCLI[39m Using tsup config: /home/markmur88/eliza/packages/core/tsup.config.ts
+[34mCLI[39m Target: node18
+[34mCLI[39m Cleaning output folder
+[34mESM[39m Build start
+[32mESM[39m [1mdist/index.js                  [22m[32m3.75 KB[39m
+[32mESM[39m [1mdist/chunk-U2ADTLZY.js         [22m[32m1.43 KB[39m
+[32mESM[39m [1mdist/chunk-JX2SRFHQ.js         [22m[32m1.52 KB[39m
+[32mESM[39m [1mdist/chunk-YIBXLDIR.js         [22m[32m749.00 B[39m
+[32mESM[39m [1mdist/chunk-R5U7XKVJ.js         [22m[32m569.00 B[39m
+[32mESM[39m [1mdist/specs/v1/templates.js     [22m[32m219.00 B[39m
+[32mESM[39m [1mdist/chunk-LACDKYHQ.js         [22m[32m193.76 KB[39m
+[32mESM[39m [1mdist/chunk-2HSL25IJ.js         [22m[32m852.00 B[39m
+[32mESM[39m [1mdist/chunk-WO7Z3GE6.js         [22m[32m5.72 KB[39m
+[32mESM[39m [1mdist/specs/v2/index.js         [22m[32m4.76 KB[39m
+[32mESM[39m [1mdist/specs/v1/types.js         [22m[32m567.00 B[39m
+[32mESM[39m [1mdist/specs/v1/uuid.js          [22m[32m340.00 B[39m
+[32mESM[39m [1mdist/specs/v1/actionExample.js [22m[32m263.00 B[39m
+[32mESM[39m [1mdist/specs/v1/index.js         [22m[32m1.53 KB[39m
+[32mESM[39m [1mdist/specs/v1/messages.js      [22m[32m440.00 B[39m
+[32mESM[39m [1mdist/specs/v1/posts.js         [22m[32m303.00 B[39m
+[32mESM[39m [1mdist/specs/v1/provider.js      [22m[32m189.00 B[39m
+[32mESM[39m [1mdist/specs/v1/runtime.js       [22m[32m306.00 B[39m
+[32mESM[39m [1mdist/specs/v1/state.js         [22m[32m143.00 B[39m
+[32mESM[39m ⚡️ Build success in 480ms
+DTS Build start
+DTS ⚡️ Build success in 27549ms
+DTS dist/index.d.ts                  82.73 KB
+DTS dist/specs/v1/actionExample.d.ts 1.47 KB
+DTS dist/specs/v1/messages.d.ts      805.00 B
+DTS dist/specs/v1/posts.d.ts         253.00 B
+DTS dist/specs/v1/provider.d.ts      691.00 B
+DTS dist/specs/v1/runtime.d.ts       6.30 KB
+DTS dist/specs/v1/templates.d.ts     1.54 KB
+DTS dist/specs/v1/state.d.ts         612.00 B
+DTS dist/specs/v1/uuid.d.ts          834.00 B
+DTS dist/specs/v1/types.d.ts         38.52 KB
+DTS dist/specs/v1/index.d.ts         1.74 KB
+DTS dist/specs/v2/index.d.ts         4.44 KB
+DTS dist/index-BHW44X0A.d.ts         10.82 KB
+DTS dist/index-C2b71pQw.d.ts         130.12 KB
+DTS dist/types-CpAVqV6l.d.ts         73.48 KB

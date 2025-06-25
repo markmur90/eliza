@@ -6,12 +6,18 @@ if [ "${SKIP_POSTINSTALL}" = "1" ]; then
     exit 0
 fi
 
-# Initialize git submodules
-echo "Initializing git submodules..."
-git submodule update --init --recursive
+# Only attempt to initialize submodules if .gitmodules exists and is not empty
+if [ -s .gitmodules ]; then
+    echo "Initializing git submodules..."
+    git submodule update --init --recursive
+    status=$?
+else
+    echo "No git submodules configured. Skipping initialization."
+    status=0
+fi
 
 # Check if initialization was successful
-if [ $? -eq 0 ]; then
+if [ $status -eq 0 ]; then
     echo "Git submodules initialized successfully"
 else
     echo "Error: Failed to initialize git submodules"

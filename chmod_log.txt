@@ -252,3 +252,5 @@
 ✅ chmod +x -> ./SadTalker/predict.py
 ✅ chmod +x -> ./SadTalker/inference.py
 ✅ chmod +x -> ./.husky/_/husky.sh
+✅ chmod +x -> ./sincronizar_git.sh
+✅ chmod +x -> ./init-submodules.sh

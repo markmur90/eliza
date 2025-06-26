@@ -1,0 +1,738 @@
+
+[0m[2m[35m$[0m [2m[1mbun test --coverage[0m
+[0m[1mbun test [0m[2mv1.2.16 (631e6748)[0m
+[0m
+src/__tests__/vena-character.test.ts:
+[0m[32m✓[0m [0mVena character JSON[2m >[0m[1m should parse and validate successfully[0m [0m[2m[[1m406.20ms[0m[2m][0m
+[0m
+src/__tests__/vena-character-file.test.ts:
+[0m[32m✓[0m [0mVena character file[2m >[0m[1m should parse and validate successfully[0m [0m[2m[1.62ms[0m[2m][0m
+[0m
+src/__tests__/roles.test.ts:
+[0m[32m✓[0m [0mroles utilities[2m > [0mgetUserServerRole[2m >[0m[1m should return role from world metadata[0m [0m[2m[1.46ms[0m[2m][0m
+[0m[32m✓[0m [0mroles utilities[2m > [0mgetUserServerRole[2m >[0m[1m should return Role.NONE when world is null[0m [0m[2m[0.39ms[0m[2m][0m
+[0m[32m✓[0m [0mroles utilities[2m > [0mgetUserServerRole[2m >[0m[1m should return Role.NONE when world has no metadata[0m [0m[2m[0.34ms[0m[2m][0m
+[0m[32m✓[0m [0mroles utilities[2m > [0mgetUserServerRole[2m >[0m[1m should return Role.NONE when world has no roles in metadata[0m [0m[2m[0.33ms[0m[2m][0m
+[0m[32m✓[0m [0mroles utilities[2m > [0mgetUserServerRole[2m >[0m[1m should check original ID format when first check fails[0m [0m[2m[0.36ms[0m[2m][0m
+[0m[32m✓[0m [0mroles utilities[2m > [0mgetUserServerRole[2m >[0m[1m should return role for different role types[0m [0m[2m[0.76ms[0m[2m][0m
+[0m[32m✓[0m [0mroles utilities[2m > [0mfindWorldsForOwner[2m >[0m[1m should find worlds where user is owner[0m [0m[2m[[1m40.81ms[0m[2m][0m
+[0m[32m✓[0m [0mroles utilities[2m > [0mfindWorldsForOwner[2m >[0m[1m should return null when entityId is empty[0m [0m[2m[1.82ms[0m[2m][0m
+[0m[32m✓[0m [0mroles utilities[2m > [0mfindWorldsForOwner[2m >[0m[1m should return null when entityId is null[0m [0m[2m[0.67ms[0m[2m][0m
+[0m[32m✓[0m [0mroles utilities[2m > [0mfindWorldsForOwner[2m >[0m[1m should return null when no worlds exist[0m [0m[2m[0.77ms[0m[2m][0m
+[0m[32m✓[0m [0mroles utilities[2m > [0mfindWorldsForOwner[2m >[0m[1m should return null when getAllWorlds returns null[0m [0m[2m[0.42ms[0m[2m][0m
+[0m[32m✓[0m [0mroles utilities[2m > [0mfindWorldsForOwner[2m >[0m[1m should return null when no worlds match the owner[0m [0m[2m[0.44ms[0m[2m][0m
+[0m[32m✓[0m [0mroles utilities[2m > [0mfindWorldsForOwner[2m >[0m[1m should handle worlds without metadata[0m [0m[2m[0.35ms[0m[2m][0m
+[0m[32m✓[0m [0mroles utilities[2m > [0mfindWorldsForOwner[2m >[0m[1m should handle worlds without ownership in metadata[0m [0m[2m[0.42ms[0m[2m][0m
+[0m
+src/__tests__/utils.test.ts:
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mparseBooleanFromText[2m >[0m[1m should return true for affirmative values[0m [0m[2m[1.79ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mparseBooleanFromText[2m >[0m[1m should return false for negative values[0m [0m[2m[0.30ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mparseBooleanFromText[2m >[0m[1m should return false for null, undefined, or empty values[0m [0m[2m[0.15ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mparseBooleanFromText[2m >[0m[1m should return false for unrecognized values[0m [0m[2m[0.12ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mformatTimestamp[2m >[0m[1m should return 'just now' for recent timestamps[0m [0m[2m[0.42ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mformatTimestamp[2m >[0m[1m should return minutes ago for timestamps within an hour[0m [0m[2m[0.24ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mformatTimestamp[2m >[0m[1m should return hours ago for timestamps within 24 hours[0m [0m[2m[0.20ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mformatTimestamp[2m >[0m[1m should return days ago for older timestamps[0m [0m[2m[0.18ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mparseJSONObjectFromText[2m >[0m[1m should parse JSON from code blocks[0m [0m[2m[1.74ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mparseJSONObjectFromText[2m >[0m[1m should parse direct JSON without code blocks[0m [0m[2m[0.27ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mparseJSONObjectFromText[2m >[0m[1m should return null for invalid JSON[0m [0m[2m[[1m18.82ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mparseJSONObjectFromText[2m >[0m[1m should return null for arrays[0m [0m[2m[0.38ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mparseJSONObjectFromText[2m >[0m[1m should return null for non-object values[0m [0m[2m[0.29ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mnormalizeJsonString[2m >[0m[1m should remove extra spaces after { and before }[0m [0m[2m[0.15ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mnormalizeJsonString[2m >[0m[1m should wrap unquoted values in double quotes[0m [0m[2m[0.12ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mnormalizeJsonString[2m >[0m[1m should convert single quotes to double quotes[0m [0m[2m[0.22ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mnormalizeJsonString[2m >[0m[1m should handle mixed formatting[0m [0m[2m[0.15ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mnormalizeJsonString[2m >[0m[1m should wrap numbers in quotes[0m [0m[2m[0.10ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mtruncateToCompleteSentence[2m >[0m[1m should return text unchanged if within limit[0m [0m[2m[0.33ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mtruncateToCompleteSentence[2m >[0m[1m should truncate at last period within limit[0m [0m[2m[0.10ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mtruncateToCompleteSentence[2m >[0m[1m should truncate at last space if no period found[0m [0m[2m[0.10ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mtruncateToCompleteSentence[2m >[0m[1m should hard truncate if no space found[0m [0m[2m[0.07ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mtruncateToCompleteSentence[2m >[0m[1m should handle edge cases[0m [0m[2m[0.24ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0msplitChunks[2m >[0m[1m should split text into chunks[0m [0m[2m[[1m14.48ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0msplitChunks[2m >[0m[1m should handle short text[0m [0m[2m[0.93ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0msplitChunks[2m >[0m[1m should respect chunk overlap[0m [0m[2m[1.41ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mtrimTokens[2m >[0m[1m should trim tokens to specified limit[0m [0m[2m[1.11ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mtrimTokens[2m >[0m[1m should return unchanged if within limit[0m [0m[2m[0.46ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mtrimTokens[2m >[0m[1m should throw error for invalid inputs[0m [0m[2m[[1m10.46ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mtrimTokens[2m >[0m[1m should skip tokenization for very short prompts[0m [0m[2m[0.41ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mparseKeyValueXml[2m >[0m[1m should parse response XML blocks[0m [0m[2m[1.12ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mparseKeyValueXml[2m >[0m[1m should handle comma-separated lists for specific keys[0m [0m[2m[0.40ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mparseKeyValueXml[2m >[0m[1m should parse boolean values[0m [0m[2m[0.18ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mparseKeyValueXml[2m >[0m[1m should handle XML entities[0m [0m[2m[0.15ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mparseKeyValueXml[2m >[0m[1m should return null for invalid XML[0m [0m[2m[0.38ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mparseKeyValueXml[2m >[0m[1m should handle any root tag name[0m [0m[2m[0.37ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mparseKeyValueXml[2m >[0m[1m should handle mismatched XML tags[0m [0m[2m[0.15ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mparseKeyValueXml[2m >[0m[1m should return null when no key-value pairs are found[0m [0m[2m[0.19ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mparseKeyValueXml[2m >[0m[1m should handle empty comma-separated lists[0m [0m[2m[0.19ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mformatMessages[2m >[0m[1m should format messages with basic content[0m [0m[2m[[1m142.43ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mformatMessages[2m >[0m[1m should format messages with actions and thoughts[0m [0m[2m[0.55ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mformatMessages[2m >[0m[1m should handle attachments[0m [0m[2m[0.39ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mformatMessages[2m >[0m[1m should filter out messages without entityId[0m [0m[2m[0.26ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mformatPosts[2m >[0m[1m should format posts grouped by room[0m [0m[2m[1.16ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mformatPosts[2m >[0m[1m should include reply information[0m [0m[2m[0.25ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mformatPosts[2m >[0m[1m should format without conversation header when specified[0m [0m[2m[0.20ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mformatPosts[2m >[0m[1m should handle missing entity with warning[0m [0m[2m[0.26ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mformatPosts[2m >[0m[1m should handle messages without roomId[0m [0m[2m[0.16ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mvalidateUuid[2m >[0m[1m should validate correct UUID format[0m [0m[2m[0.43ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mvalidateUuid[2m >[0m[1m should return null for invalid UUID format[0m [0m[2m[1.11ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mvalidateUuid[2m >[0m[1m should handle UUID-like strings that are invalid[0m [0m[2m[0.26ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mstringToUuid[2m >[0m[1m should convert string to UUID[0m [0m[2m[[1m75.49ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mstringToUuid[2m >[0m[1m should convert number to UUID[0m [0m[2m[0.29ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mstringToUuid[2m >[0m[1m should throw TypeError for non-string/non-number input[0m [0m[2m[0.52ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mstringToUuid[2m >[0m[1m should generate consistent UUID for same input[0m [0m[2m[0.41ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mstringToUuid[2m >[0m[1m should generate different UUIDs for different inputs[0m [0m[2m[0.30ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mstringToUuid[2m >[0m[1m should handle special characters in string input[0m [0m[2m[0.25ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mstringToUuid[2m >[0m[1m should handle empty string[0m [0m[2m[0.24ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mstringToUuid[2m >[0m[1m should handle very long strings[0m [0m[2m[1.04ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0msafeReplacer[2m >[0m[1m should handle circular references[0m [0m[2m[0.53ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0msafeReplacer[2m >[0m[1m should handle non-circular objects normally[0m [0m[2m[0.17ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0msafeReplacer[2m >[0m[1m should handle nested circular references[0m [0m[2m[0.26ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0msafeReplacer[2m >[0m[1m should handle arrays with circular references[0m [0m[2m[0.18ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mcomposePrompt[2m >[0m[1m should compose prompt with state values[0m [0m[2m[[1m143.40ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mcomposePrompt[2m >[0m[1m should handle missing state values[0m [0m[2m[4.42ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mcomposePrompt[2m >[0m[1m should handle empty state[0m [0m[2m[2.36ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mcomposePrompt[2m >[0m[1m should handle multiple occurrences of same placeholder[0m [0m[2m[3.56ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mcomposePromptFromState[2m >[0m[1m should compose prompt from State object[0m [0m[2m[5.16ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mcomposePromptFromState[2m >[0m[1m should handle State with array data[0m [0m[2m[3.28ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0mcomposePromptFromState[2m >[0m[1m should handle missing properties in State[0m [0m[2m[3.49ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0maddHeader[2m >[0m[1m should add header to body[0m [0m[2m[0.21ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0maddHeader[2m >[0m[1m should handle empty header[0m [0m[2m[0.11ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0maddHeader[2m >[0m[1m should handle empty body[0m [0m[2m[0.08ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0maddHeader[2m >[0m[1m should handle both empty[0m [0m[2m[0.06ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m > [0maddHeader[2m >[0m[1m should handle multiline header and body[0m [0m[2m[0.13ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m >[0m[1m addHeader prepends header when body exists[0m [0m[2m[0.12ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m >[0m[1m parseKeyValueXml parses simple xml block[0m [0m[2m[0.34ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m >[0m[1m safeReplacer handles circular objects[0m [0m[2m[0.24ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m >[0m[1m validateUuid validates correct uuid and rejects bad values[0m [0m[2m[0.23ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m >[0m[1m composePrompt inserts state values[0m [0m[2m[2.09ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m >[0m[1m composePromptFromState flattens state values[0m [0m[2m[3.22ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m >[0m[1m formatPosts formats conversation text[0m [0m[2m[0.45ms[0m[2m][0m
+[0m[32m✓[0m [0mUtils Comprehensive Tests[2m >[0m[1m trimTokens truncates using runtime tokenizer[0m [0m[2m[0.91ms[0m[2m][0m
+[0m
+src/__tests__/character-validation.test.ts:
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0mvalidateCharacter[2m >[0m[1m should validate a complete valid character[0m [0m[2m[4.49ms[0m[2m][0m
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0mvalidateCharacter[2m >[0m[1m should validate a minimal valid character[0m [0m[2m[0.85ms[0m[2m][0m
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0mvalidateCharacter[2m >[0m[1m should reject character without name[0m [0m[2m[1.30ms[0m[2m][0m
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0mvalidateCharacter[2m >[0m[1m should reject character with empty name[0m [0m[2m[0.49ms[0m[2m][0m
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0mvalidateCharacter[2m >[0m[1m should reject character without bio[0m [0m[2m[0.71ms[0m[2m][0m
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0mvalidateCharacter[2m >[0m[1m should accept bio as string array[0m [0m[2m[0.40ms[0m[2m][0m
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0mvalidateCharacter[2m >[0m[1m should reject unknown properties in strict mode[0m [0m[2m[0.99ms[0m[2m][0m
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0mvalidateCharacter[2m >[0m[1m should validate optional fields correctly[0m [0m[2m[2.28ms[0m[2m][0m
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0mvalidateCharacter[2m >[0m[1m should validate UUID format for id field[0m [0m[2m[0.56ms[0m[2m][0m
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0mvalidateCharacter[2m >[0m[1m should reject invalid UUID format for id field[0m [0m[2m[0.58ms[0m[2m][0m
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0mparseAndValidateCharacter[2m >[0m[1m should parse and validate valid JSON character[0m [0m[2m[0.50ms[0m[2m][0m
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0mparseAndValidateCharacter[2m >[0m[1m should handle malformed JSON[0m [0m[2m[0.40ms[0m[2m][0m
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0mparseAndValidateCharacter[2m >[0m[1m should handle JSON with invalid character data[0m [0m[2m[0.56ms[0m[2m][0m
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0mparseAndValidateCharacter[2m >[0m[1m should handle empty JSON object[0m [0m[2m[0.70ms[0m[2m][0m
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0misValidCharacter[2m >[0m[1m should return true for valid character[0m [0m[2m[0.38ms[0m[2m][0m
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0misValidCharacter[2m >[0m[1m should return false for invalid character[0m [0m[2m[0.34ms[0m[2m][0m
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0misValidCharacter[2m >[0m[1m should return false for non-object input[0m [0m[2m[0.58ms[0m[2m][0m
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0mComplex validation scenarios[2m >[0m[1m should validate character with complex knowledge array[0m [0m[2m[0.80ms[0m[2m][0m
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0mComplex validation scenarios[2m >[0m[1m should validate character with complex message examples[0m [0m[2m[0.83ms[0m[2m][0m
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0mComplex validation scenarios[2m >[0m[1m should validate character with flexible settings[0m [0m[2m[1.06ms[0m[2m][0m
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0mEdge cases and error handling[2m >[0m[1m should handle null and undefined inputs[0m [0m[2m[0.43ms[0m[2m][0m
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0mEdge cases and error handling[2m >[0m[1m should handle non-object inputs[0m [0m[2m[0.30ms[0m[2m][0m
+[0m[32m✓[0m [0mCharacter Schema Validation[2m > [0mEdge cases and error handling[2m >[0m[1m should provide detailed error information[0m [0m[2m[0.58ms[0m[2m][0m
+[0m
+src/__tests__/prompts.test.ts:
+[0m[32m✓[0m [0mPrompts[2m > [0mTemplate Structure[2m >[0m[1m shouldRespondTemplate should contain required placeholders and XML structure[0m [0m[2m[2.58ms[0m[2m][0m
+[0m[32m✓[0m [0mPrompts[2m > [0mTemplate Structure[2m >[0m[1m messageHandlerTemplate should contain required placeholders and structure[0m [0m[2m[0.36ms[0m[2m][0m
+[0m[32m✓[0m [0mPrompts[2m > [0mTemplate Structure[2m >[0m[1m postCreationTemplate should contain required placeholders and examples[0m [0m[2m[0.32ms[0m[2m][0m
+[0m[32m✓[0m [0mPrompts[2m > [0mTemplate Structure[2m >[0m[1m booleanFooter should be a simple instruction[0m [0m[2m[0.19ms[0m[2m][0m
+[0m[32m✓[0m [0mPrompts[2m > [0mTemplate Structure[2m >[0m[1m imageDescriptionTemplate should contain proper XML structure[0m [0m[2m[0.22ms[0m[2m][0m
+[0m[32m✓[0m [0mPrompts[2m > [0mTemplate Consistency[2m >[0m[1m all templates should have consistent XML output format instructions[0m [0m[2m[0.20ms[0m[2m][0m
+[0m[32m✓[0m [0mPrompts[2m > [0mTemplate Consistency[2m >[0m[1m all templates should use proper XML closing tags[0m [0m[2m[2.10ms[0m[2m][0m
+[0m[32m✓[0m [0mPrompts[2m > [0mTemplate Placeholders[2m >[0m[1m should use consistent placeholder format[0m [0m[2m[0.70ms[0m[2m][0m
+[0m
+src/__tests__/messages.test.ts:
+[0m[32m✓[0m [0mMessages Library[2m >[0m[1m formatEntities should format entities into a readable string[0m [0m[2m[0.44ms[0m[2m][0m
+[0m[32m✓[0m [0mMessages Library[2m >[0m[1m formatMessages should format messages into a readable string[0m [0m[2m[0.31ms[0m[2m][0m
+[0m[32m✓[0m [0mMessages Library[2m >[0m[1m formatTimestamp should return correct time string[0m [0m[2m[0.12ms[0m[2m][0m
+[0m[32m✓[0m [0mMessages Library[2m >[0m[1m formatMessages should include attachments if present[0m [0m[2m[0.25ms[0m[2m][0m
+[0m[32m✓[0m [0mMessages Library[2m >[0m[1m formatMessages should handle empty attachments gracefully[0m [0m[2m[0.19ms[0m[2m][0m
+[0m[32m✓[0m [0mMessages[2m > [0mformatEntities[2m >[0m[1m should format entities with complete details[0m [0m[2m[0.15ms[0m[2m][0m
+[0m[32m✓[0m [0mMessages[2m > [0mformatEntities[2m >[0m[1m should handle entities without details[0m [0m[2m[0.12ms[0m[2m][0m
+[0m[32m✓[0m [0mMessages[2m > [0mformatEntities[2m >[0m[1m should handle empty entities array[0m [0m[2m[0.10ms[0m[2m][0m
+[0m[32m✓[0m [0mMessages[2m > [0mformatMessages[2m >[0m[1m should handle messages from unknown users[0m [0m[2m[0.20ms[0m[2m][0m
+[0m[32m✓[0m [0mMessages[2m > [0mformatMessages[2m >[0m[1m should handle messages with no action[0m [0m[2m[0.20ms[0m[2m][0m
+[0m[32m✓[0m [0mMessages[2m > [0mformatMessages[2m >[0m[1m should handle empty messages array[0m [0m[2m[0.10ms[0m[2m][0m
+[0m[32m✓[0m [0mMessages[2m > [0mformatTimestamp[2m >[0m[1m should handle exact time boundaries[0m [0m[2m[0.14ms[0m[2m][0m
+[0m
+src/__tests__/entities.test.ts:
+[0m[32m✓[0m [0mentities[2m > [0mfindEntityByName[2m >[0m[1m should find entity by exact name match[0m [0m[2m[[1m16.43ms[0m[2m][0m
+[0m[32m✓[0m [0mentities[2m > [0mfindEntityByName[2m >[0m[1m should return null when room not found[0m [0m[2m[0.68ms[0m[2m][0m
+[0m[32m✓[0m [0mentities[2m > [0mfindEntityByName[2m >[0m[1m should filter components based on permissions[0m [0m[2m[5.40ms[0m[2m][0m
+[0m[32m✓[0m [0mentities[2m > [0mfindEntityByName[2m >[0m[1m should handle LLM parse failure gracefully[0m [0m[2m[7.35ms[0m[2m][0m
+[0m[32m✓[0m [0mentities[2m > [0mfindEntityByName[2m >[0m[1m should handle EXACT_MATCH with entity components filtering[0m [0m[2m[[1m10.52ms[0m[2m][0m
+[0m[32m✓[0m [0mentities[2m > [0mfindEntityByName[2m >[0m[1m should find entity by username in components[0m [0m[2m[6.74ms[0m[2m][0m
+[0m[32m✓[0m [0mentities[2m > [0mfindEntityByName[2m >[0m[1m should find entity by handle in components[0m [0m[2m[6.45ms[0m[2m][0m
+[0m[32m✓[0m [0mentities[2m > [0mcreateUniqueUuid[2m >[0m[1m should return agent ID when base user ID matches agent ID[0m [0m[2m[0.33ms[0m[2m][0m
+[0m[32m✓[0m [0mentities[2m > [0mcreateUniqueUuid[2m >[0m[1m should create UUID from combined string for different IDs[0m [0m[2m[0.17ms[0m[2m][0m
+[0m[32m✓[0m [0mentities[2m > [0mcreateUniqueUuid[2m >[0m[1m should handle UUID type as base user ID[0m [0m[2m[0.13ms[0m[2m][0m
+[0m[32m✓[0m [0mentities[2m > [0mgetEntityDetails[2m >[0m[1m should retrieve and format entity details for a room[0m [0m[2m[3.00ms[0m[2m][0m
+[0m[32m✓[0m [0mentities[2m > [0mgetEntityDetails[2m >[0m[1m should handle deduplication of entities[0m [0m[2m[0.85ms[0m[2m][0m
+[0m[32m✓[0m [0mentities[2m > [0mgetEntityDetails[2m >[0m[1m should merge array data in components[0m [0m[2m[0.78ms[0m[2m][0m
+[0m[32m✓[0m [0mentities[2m > [0mformatEntities[2m >[0m[1m should format single entity with basic info[0m [0m[2m[0.24ms[0m[2m][0m
+[0m[32m✓[0m [0mentities[2m > [0mformatEntities[2m >[0m[1m should format multiple entities[0m [0m[2m[0.26ms[0m[2m][0m
+[0m[32m✓[0m [0mentities[2m > [0mformatEntities[2m >[0m[1m should handle entities without metadata[0m [0m[2m[0.16ms[0m[2m][0m
+[0m[32m✓[0m [0mentities[2m > [0mformatEntities[2m >[0m[1m should handle empty entities array[0m [0m[2m[0.10ms[0m[2m][0m
+[0m[32m✓[0m [0mentities[2m > [0mformatEntities[2m >[0m[1m should handle entities with empty metadata[0m [0m[2m[0.17ms[0m[2m][0m
+[0m[32m✓[0m [0mentities[2m >[0m[1m createUniqueUuid combines user and agent ids[0m [0m[2m[0.51ms[0m[2m][0m
+[0m[32m✓[0m [0mentities[2m >[0m[1m formatEntities outputs joined string[0m [0m[2m[0.23ms[0m[2m][0m
+[0m
+src/__tests__/database.test.ts:
+[0m[32m✓[0m [0mDatabaseAdapter Tests[2m >[0m[1m should return memories by room ID[0m [0m[2m[1.00ms[0m[2m][0m
+[0m[32m✓[0m [0mDatabaseAdapter Tests[2m >[0m[1m should return cached embeddings[0m [0m[2m[0.56ms[0m[2m][0m
+[0m[32m✓[0m [0mDatabaseAdapter Tests[2m >[0m[1m should search memories based on embedding[0m [0m[2m[0.47ms[0m[2m][0m
+[0m[32m✓[0m [0mDatabaseAdapter Tests[2m >[0m[1m should get an account by user ID[0m [0m[2m[0.42ms[0m[2m][0m
+[0m[32m✓[0m [0mDatabaseAdapter Tests[2m >[0m[1m should create a new account[0m [0m[2m[0.33ms[0m[2m][0m
+[0m[32m✓[0m [0mDatabaseAdapter Tests[2m >[0m[1m should return entities by room ID[0m [0m[2m[0.33ms[0m[2m][0m
+[0m
+src/__tests__/settings.test.ts:
+[0m[32m✓[0m [0msettings utilities[2m > [0mcreateSettingFromConfig[2m >[0m[1m should create setting with all required fields[0m [0m[2m[0.35ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mcreateSettingFromConfig[2m >[0m[1m should create setting with optional fields[0m [0m[2m[0.48ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mgetSalt[2m >[0m[1m should return salt from environment variable[0m [0m[2m[0.26ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mgetSalt[2m >[0m[1m should use default salt when env variable is not set[0m [0m[2m[0.12ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mgetSalt[2m >[0m[1m should handle import.meta.env in non-node environments[0m [0m[2m[0.05ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mencryptStringValue[2m >[0m[1m should encrypt a string value[0m [0m[2m[2.15ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mencryptStringValue[2m >[0m[1m should return undefined/null values as is[0m [0m[2m[0.14ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mencryptStringValue[2m >[0m[1m should return boolean values as is[0m [0m[2m[0.10ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mencryptStringValue[2m >[0m[1m should return number values as is[0m [0m[2m[0.28ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mencryptStringValue[2m >[0m[1m should return non-string objects as is[0m [0m[2m[0.12ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mencryptStringValue[2m >[0m[1m should not re-encrypt already encrypted values[0m [0m[2m[0.41ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mencryptStringValue[2m >[0m[1m should encrypt values that look like encrypted format but have invalid IV[0m [0m[2m[0.30ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mdecryptStringValue[2m >[0m[1m should decrypt an encrypted value[0m [0m[2m[0.85ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mdecryptStringValue[2m >[0m[1m should return undefined/null values as is[0m [0m[2m[0.13ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mdecryptStringValue[2m >[0m[1m should return boolean values as is[0m [0m[2m[0.12ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mdecryptStringValue[2m >[0m[1m should return number values as is[0m [0m[2m[0.07ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mdecryptStringValue[2m >[0m[1m should return non-string objects as is[0m [0m[2m[0.12ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mdecryptStringValue[2m >[0m[1m should return original value if not in encrypted format[0m [0m[2m[0.13ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mdecryptStringValue[2m >[0m[1m should return original value if IV length is invalid[0m [0m[2m[0.14ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mdecryptStringValue[2m >[0m[1m should return original value on decryption error[0m [0m[2m[0.51ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mdecryptStringValue[2m >[0m[1m should handle empty IV gracefully[0m [0m[2m[0.11ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0msaltSettingValue[2m >[0m[1m should encrypt secret string settings[0m [0m[2m[0.94ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0msaltSettingValue[2m >[0m[1m should not encrypt non-secret settings[0m [0m[2m[0.25ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0msaltSettingValue[2m >[0m[1m should not encrypt non-string values[0m [0m[2m[0.16ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0msaltSettingValue[2m >[0m[1m should not encrypt empty string values[0m [0m[2m[0.16ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0munsaltSettingValue[2m >[0m[1m should decrypt secret string settings[0m [0m[2m[0.79ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0munsaltSettingValue[2m >[0m[1m should not decrypt non-secret settings[0m [0m[2m[0.25ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0msaltWorldSettings[2m >[0m[1m should salt all secret settings in world settings[0m [0m[2m[0.92ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0munsaltWorldSettings[2m >[0m[1m should unsalt all secret settings in world settings[0m [0m[2m[0.89ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mupdateWorldSettings[2m >[0m[1m should update world settings successfully[0m [0m[2m[1.36ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mupdateWorldSettings[2m >[0m[1m should return false when world not found[0m [0m[2m[0.34ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mupdateWorldSettings[2m >[0m[1m should initialize metadata if it does not exist[0m [0m[2m[0.33ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mgetWorldSettings[2m >[0m[1m should get and unsalt world settings[0m [0m[2m[1.03ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mgetWorldSettings[2m >[0m[1m should return null when world not found[0m [0m[2m[0.23ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mgetWorldSettings[2m >[0m[1m should return null when world has no settings[0m [0m[2m[0.25ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0minitializeOnboarding[2m >[0m[1m should initialize settings from config[0m [0m[2m[0.95ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0minitializeOnboarding[2m >[0m[1m should return existing settings if already initialized[0m [0m[2m[0.80ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0minitializeOnboarding[2m >[0m[1m should handle config without settings[0m [0m[2m[0.38ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mencryptedCharacter[2m >[0m[1m should encrypt character settings.secrets[0m [0m[2m[0.87ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mencryptedCharacter[2m >[0m[1m should encrypt character.secrets[0m [0m[2m[0.92ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mencryptedCharacter[2m >[0m[1m should handle character without secrets[0m [0m[2m[0.20ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mencryptedCharacter[2m >[0m[1m should not modify original character[0m [0m[2m[0.50ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mdecryptedCharacter[2m >[0m[1m should decrypt character settings.secrets[0m [0m[2m[1.01ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mdecryptedCharacter[2m >[0m[1m should decrypt character.secrets[0m [0m[2m[0.44ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mdecryptedCharacter[2m >[0m[1m should handle character without secrets[0m [0m[2m[0.18ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mencryptObjectValues[2m >[0m[1m should encrypt all string values in object[0m [0m[2m[0.52ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mdecryptObjectValues[2m >[0m[1m should decrypt all string values in object[0m [0m[2m[[1m16.19ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m > [0mdecryptSecret alias[2m >[0m[1m should be an alias for decryptStringValue[0m [0m[2m[0.16ms[0m[2m][0m
+[0m
+src/__tests__/search.test.ts:
+[0m[32m✓[0m [0mBM25 search[2m >[0m[1m indexes documents and finds matches[0m [0m[2m[[1m59.49ms[0m[2m][0m
+[0m
+src/__tests__/runtime.test.ts:
+runtime.plugins [
+  {
+    [0mname[2m:[0m [0m[32m[0m[32m"TestPlugin"[0m[0m[0m[2m,[0m
+    [0mdescription[2m:[0m [0m[32m[0m[32m"A test plugin"[0m[0m[0m[2m,[0m
+  }
+]
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mPlugin Registration[2m >[0m[1m should register a simple plugin[0m [0m[2m[6.91ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mPlugin Registration[2m >[0m[1m should call plugin init function[0m [0m[2m[0.67ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mPlugin Registration[2m >[0m[1m should register plugin features (actions, providers, models) when initialized[0m [0m[2m[[1m45.77ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mInitialization[2m >[0m[1m should call adapter.init and core setup methods for an existing agent[0m [0m[2m[4.17ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mInitialization[2m >[0m[1m should create a new agent if one does not exist[0m [0m[2m[0.88ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mInitialization[2m >[0m[1m should throw if adapter is not available during initialize[0m [0m[2m[2.87ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mState Composition[2m >[0m[1m should call provider get methods[0m [0m[2m[6.82ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mState Composition[2m >[0m[1m should filter providers[0m [0m[2m[[1m10.99ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mModel Usage[2m >[0m[1m should call registered model handler[0m [0m[2m[[1m316.99ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mModel Usage[2m >[0m[1m should throw if model type is not registered[0m [0m[2m[0.48ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mAction Processing[2m >[0m[1m should find and execute the correct action handler[0m [0m[2m[[1m10.82ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mAction Processing[2m >[0m[1m should not execute if no action name matches[0m [0m[2m[1.26ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mAdapter Passthrough[2m >[0m[1m createEntity should call adapter.createEntities[0m [0m[2m[[1m12.46ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mAdapter Passthrough[2m >[0m[1m getMemoryById should call adapter.getMemoryById[0m [0m[2m[0.69ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mEvent Emitter (on/emit/off)[2m >[0m[1m should register and emit events[0m [0m[2m[0.44ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mEvent Emitter (on/emit/off)[2m >[0m[1m should remove event handler with off[0m [0m[2m[0.34ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mOriginal Suite Tests[2m > [0mmodel provider management[2m >[0m[1m should provide access to the configured model provider[0m [0m[2m[0.13ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mOriginal Suite Tests[2m > [0mstate management[2m >[0m[1m should compose state with additional keys[0m [0m[2m[[1m57.40ms[0m[2m][0m
+[2025-06-26 02:38:14.500 +0000] [31mERROR[39m: [36mDatabase adapter not initialized. Make sure @elizaos/plugin-sql is included in your plugins.[39m
+    agentName: "Test Character"
+    logLevel: "info"
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mOriginal Suite Tests[2m > [0maction management[2m >[0m[1m should register an action[0m [0m[2m[0.18ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mOriginal Suite Tests[2m > [0maction management[2m >[0m[1m should allow registering multiple actions[0m [0m[2m[0.37ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m >[0m[1m should construct without errors[0m [0m[2m[[1m54.97ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m >[0m[1m should register database adapter via constructor[0m [0m[2m[0.18ms[0m[2m][0m
+[0m
+src/__tests__/actions.test.ts:
+[0m[32m✓[0m [0mActions[2m > [0mcomposeActionExamples[2m >[0m[1m should generate examples with correct format[0m [0m[2m[1.73ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mcomposeActionExamples[2m >[0m[1m should replace name placeholders with generated names[0m [0m[2m[0.49ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mcomposeActionExamples[2m >[0m[1m should handle empty actions array[0m [0m[2m[[1m15.79ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mcomposeActionExamples[2m >[0m[1m should handle count larger than available examples[0m [0m[2m[0.64ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mcomposeActionExamples[2m >[0m[1m should handle actions without examples[0m [0m[2m[[1m163.30ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mcomposeActionExamples[2m >[0m[1m should handle count of zero[0m [0m[2m[0.10ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mcomposeActionExamples[2m >[0m[1m should handle negative count[0m [0m[2m[0.25ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mformatActionNames[2m >[0m[1m should format action names correctly[0m [0m[2m[0.78ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mformatActionNames[2m >[0m[1m should handle single action[0m [0m[2m[0.15ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mformatActionNames[2m >[0m[1m should handle empty actions array[0m [0m[2m[0.09ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mformatActions[2m >[0m[1m should format actions with descriptions[0m [0m[2m[0.28ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mformatActions[2m >[0m[1m should include commas and newlines between multiple actions[0m [0m[2m[[1m44.75ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mformatActions[2m >[0m[1m should handle empty actions array[0m [0m[2m[0.23ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mAction Structure[2m >[0m[1m should validate action structure[0m [0m[2m[2.96ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mAction Structure[2m >[0m[1m should validate example structure[0m [0m[2m[[1m39.99ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mAction Structure[2m >[0m[1m should have unique action names[0m [0m[2m[3.49ms[0m[2m][0m
+[0m
+src/__tests__/uuid.test.ts:
+[2025-06-26 02:38:14.443 +0000] [32mINFO[39m: [36mRunning plugin migrations...[39m
+    agentName: "Test Character"
+    logLevel: "info"
+[2025-06-26 02:38:14.495 +0000] [32mINFO[39m: [36mRunning plugin migrations...[39m
+    agentName: "Test Character"
+    logLevel: "info"
+[2025-06-26 02:38:14.496 +0000] [32mINFO[39m: [36mFound 0 plugins with schemas to migrate.[39m
+    agentName: "Test Character"
+    logLevel: "info"
+[2025-06-26 02:38:14.496 +0000] [32mINFO[39m: [36mPlugin migrations completed.[39m
+    agentName: "Test Character"
+    logLevel: "info"
+[2025-06-26 02:38:14.496 +0000] [33mWARN[39m: [36m[AgentRuntime][Test Character] No TEXT_EMBEDDING model registered. Skipping embedding dimension setup.[39m
+    agentName: "Test Character"
+    logLevel: "info"
+[2025-06-26 02:38:14.465 +0000] [32mINFO[39m: [36mFound 0 plugins with schemas to migrate.[39m
+    agentName: "Test Character"
+    logLevel: "info"
+[2025-06-26 02:38:14.465 +0000] [32mINFO[39m: [36mPlugin migrations completed.[39m
+    agentName: "Test Character"
+    logLevel: "info"
+[2025-06-26 02:38:14.474 +0000] [33mWARN[39m: [36m[AgentRuntime][Test Character] No TEXT_EMBEDDING model registered. Skipping embedding dimension setup.[39m
+    agentName: "Test Character"
+    logLevel: "info"
+[2025-06-26 02:38:14.488 +0000] [32mINFO[39m: [36mRunning plugin migrations...[39m
+    agentName: "Test Character"
+    logLevel: "info"
+[2025-06-26 02:38:14.492 +0000] [32mINFO[39m: [36mFound 0 plugins with schemas to migrate.[39m
+    agentName: "Test Character"
+    logLevel: "info"
+[2025-06-26 02:38:14.492 +0000] [32mINFO[39m: [36mPlugin migrations completed.[39m
+    agentName: "Test Character"
+    logLevel: "info"
+[2025-06-26 02:38:14.492 +0000] [33mWARN[39m: [36m[AgentRuntime][Test Character] No TEXT_EMBEDDING model registered. Skipping embedding dimension setup.[39m
+    agentName: "Test Character"
+    logLevel: "info"
+[2025-06-26 02:38:14.876 +0000] [31mERROR[39m: [36mNo action found for: NonExistentAction[39m
+    agentName: "Test Character"
+    logLevel: "info"
+[0m[32m✓[0m [0mUUID Module[2m > [0mstringToUuid[2m > [0minput handling[2m >[0m[1m should convert number inputs to strings correctly[0m [0m[2m[1.32ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0mstringToUuid[2m > [0minput handling[2m >[0m[1m should throw TypeError for invalid input types[0m [0m[2m[0.48ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0mstringToUuid[2m > [0minput handling[2m >[0m[1m should handle empty string input[0m [0m[2m[0.52ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0mstringToUuid[2m > [0minput handling[2m >[0m[1m should handle Unicode characters and emojis consistently[0m [0m[2m[1.11ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0mstringToUuid[2m > [0mUUID version and variant bits[2m >[0m[1m should set correct version bits (version 5)[0m [0m[2m[1.63ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0mstringToUuid[2m > [0mUUID version and variant bits[2m >[0m[1m should set correct variant bits (RFC4122)[0m [0m[2m[0.49ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0mstringToUuid[2m > [0mencoding handling[2m >[0m[1m should handle URL-unsafe characters[0m [0m[2m[0.47ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0mstringToUuid[2m > [0mencoding handling[2m >[0m[1m should handle very long inputs[0m [0m[2m[5.09ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0mstringToUuid[2m >[0m[1m should generate a valid UUID matching the standard format[0m [0m[2m[0.34ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0mstringToUuid[2m >[0m[1m should generate consistent UUIDs for identical inputs[0m [0m[2m[1.08ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0mstringToUuid[2m >[0m[1m should generate unique UUIDs for different inputs[0m [0m[2m[0.57ms[0m[2m][0m
+[0m
+src/__tests__/services.test.ts:
+[0m[32m✓[0m [0mservice builder[2m >[0m[1m createService builds custom class[0m [0m[2m[[1m13.70ms[0m[2m][0m
+[0m[32m✓[0m [0mservice builder[2m >[0m[1m defineService builds from definition[0m [0m[2m[1.27ms[0m[2m][0m
+[0m[32m✓[0m [0mservice builder[2m >[0m[1m should throw error when start function is not defined[0m [0m[2m[0.44ms[0m[2m][0m
+[0m[32m✓[0m [0mservice builder[2m >[0m[1m should call custom stop function when provided[0m [0m[2m[1.89ms[0m[2m][0m
+[0m[32m✓[0m [0mservice builder[2m >[0m[1m should handle service without stop function[0m [0m[2m[0.68ms[0m[2m][0m
+[0m[32m✓[0m [0mservice builder[2m >[0m[1m defineService should provide default stop function[0m [0m[2m[1.08ms[0m[2m][0m
+[0m[32m✓[0m [0mservice builder[2m >[0m[1m should set all properties correctly with chaining[0m [0m[2m[0.61ms[0m[2m][0m
+[0m
+src/__tests__/logger.test.ts:
+[0m[32m✓[0m [0mLogger[2m > [0mLogger Creation[2m >[0m[1m should export logger instance[0m [0m[2m[0.19ms[0m[2m][0m
+[0m[32m✓[0m [0mLogger[2m > [0mLogger Creation[2m >[0m[1m should export elizaLogger as alias for backward compatibility[0m [0m[2m[0.12ms[0m[2m][0m
+[0m[32m✓[0m [0mLogger[2m > [0mLogger Creation[2m >[0m[1m should have custom log levels[0m [0m[2m[[1m10.96ms[0m[2m][0m
+[0m[32m✓[0m [0mLogger[2m > [0mcreateLogger Function[2m >[0m[1m should create logger with bindings[0m [0m[2m[[1m13.53ms[0m[2m][0m
+[0m[32m✓[0m [0mLogger[2m > [0mcreateLogger Function[2m >[0m[1m should create logger without bindings[0m [0m[2m[0.67ms[0m[2m][0m
+[0m[32m✓[0m [0mLogger[2m > [0mcreateLogger Function[2m >[0m[1m should handle boolean bindings parameter[0m [0m[2m[3.24ms[0m[2m][0m
+[0m[32m✓[0m [0mLogger[2m > [0mLog Level Configuration[2m >[0m[1m should use debug level when LOG_LEVEL is debug[0m [0m[2m[1.12ms[0m[2m][0m
+[0m[32m✓[0m [0mLogger[2m > [0mLog Level Configuration[2m >[0m[1m should use DEFAULT_LOG_LEVEL when LOG_LEVEL is not debug[0m [0m[2m[0.72ms[0m[2m][0m
+[0m[32m✓[0m [0mLogger[2m > [0mLog Level Configuration[2m >[0m[1m should default to info level when no log level is specified[0m [0m[2m[4.56ms[0m[2m][0m
+[0m[32m✓[0m [0mLogger[2m > [0mJSON Format Configuration[2m >[0m[1m should use JSON format when LOG_JSON_FORMAT is true[0m [0m[2m[1.28ms[0m[2m][0m
+[0m[32m✓[0m [0mLogger[2m > [0mJSON Format Configuration[2m >[0m[1m should use pretty format when LOG_JSON_FORMAT is false[0m [0m[2m[1.83ms[0m[2m][0m
+{"level":30,"time":1750905496743,"pid":2928831,"hostname":"local","agentName":"test","agentId":"123","msg":"registered successfully"}
+{"level":30,"time":1750905496749,"pid":2928831,"hostname":"local","agentName":"test","agentId":"123","msg":"Registering"}
+{"level":30,"time":1750905496749,"pid":2928831,"hostname":"local","agentName":"test","agentId":"123","msg":"Success:"}
+{"level":30,"time":1750905496749,"pid":2928831,"hostname":"local","agentName":"test","agentId":"123","msg":"linked to"}
+{"level":30,"time":1750905496749,"pid":2928831,"hostname":"local","agentName":"test","agentId":"123","msg":"Started"}
+[0m[32m✓[0m [0mLogger[2m > [0mLog Filtering[2m >[0m[1m should filter service registration logs in non-debug mode[0m [0m[2m[9.21ms[0m[2m][0m
+[0m[32m✓[0m [0mLogger[2m > [0mLog Filtering[2m >[0m[1m should not filter service registration logs in debug mode[0m [0m[2m[2.14ms[0m[2m][0m
+{"level":50,"time":1750905496757,"pid":2928831,"hostname":"local","error":{"message":"(Error) Test error","stack":["Error: Test error","at <anonymous> (/home/markmur88/eliza/packages/core/src/__tests__/logger.test.ts:166:29)"]}}
+{"level":50,"time":1750905496757,"pid":2928831,"hostname":"local","message":"(Error) Test error","stack":["Error: Test error","at <anonymous> (/home/markmur88/eliza/packages/core/src/__tests__/logger.test.ts:166:29)"],"msg":"Message"}
+{"level":50,"time":1750905496758,"pid":2928831,"hostname":"local","context":"test","msg":"Error occurred {}"}
+[0m[32m✓[0m [0mLogger[2m > [0mError Handling[2m >[0m[1m should handle Error objects in log messages[0m [0m[2m[4.66ms[0m[2m][0m
+{"level":50,"time":1750905496763,"pid":2928831,"hostname":"local","error":{"message":"(TestError) Test error","stack":["TestError: Test error","at <anonymous> (/home/markmur88/eliza/packages/core/src/__tests__/logger.test.ts:177:29)"]}}
+[0m[32m✓[0m [0mLogger[2m > [0mError Handling[2m >[0m[1m should format error messages properly[0m [0m[2m[4.13ms[0m[2m][0m
+[0m[32m✓[0m [0mLogger[2m > [0mClear Method[2m >[0m[1m should have clear method when not using raw JSON format[0m [0m[2m[0.15ms[0m[2m][0m
+{"level":30,"time":1750905496769,"pid":2928831,"hostname":"local","msg":"Simple string"}
+{"level":30,"time":1750905496769,"pid":2928831,"hostname":"local","key":"value","msg":"With object"}
+{"level":30,"time":1750905496770,"pid":2928831,"hostname":"local","msg":"Multiple string parts"}
+{"level":50,"time":1750905496771,"pid":2928831,"hostname":"local","error":{"message":"(Error) Test","stack":["Error: Test","at <anonymous> (/home/markmur88/eliza/packages/core/src/__tests__/logger.test.ts:202:43)","at toThrow (unknown)","at <anonymous> (/home/markmur88/eliza/packages/core/src/__tests__/logger.test.ts:202:77)"]}}
+[0m[32m✓[0m [0mLogger[2m > [0mHook Methods[2m >[0m[1m should handle various log input formats[0m [0m[2m[8.26ms[0m[2m][0m
+{"level":50,"time":1750905496773,"pid":2928831,"hostname":"local","message":"(Error) Test error","stack":["Error: Test error","at <anonymous> (/home/markmur88/eliza/packages/core/src/__tests__/logger.test.ts:207:25)"],"extra":"data","msg":"Message"}
+[0m[32m✓[0m [0mLogger[2m > [0mHook Methods[2m >[0m[1m should handle mixed arguments with errors[0m [0m[2m[2.09ms[0m[2m][0m
+[0m[32m✓[0m [0mLogger[2m > [0mDiagnostic Mode[2m >[0m[1m should add diagnostic flag when LOG_DIAGNOSTIC is enabled[0m [0m[2m[1.05ms[0m[2m][0m
+{"level":30,"time":1750905496777,"pid":2928831,"hostname":"local","msg":"Info message"}
+{"level":40,"time":1750905496778,"pid":2928831,"hostname":"local","msg":"Warn message"}
+{"level":50,"time":1750905496779,"pid":2928831,"hostname":"local","msg":"Error message"}
+{"level":60,"time":1750905496780,"pid":2928831,"hostname":"local","msg":"Fatal message"}
+[0m[32m✓[0m [0mLogger[2m > [0mCustom Prettifiers[2m >[0m[1m should format log levels correctly[0m [0m[2m[7.15ms[0m[2m][0m
+{"level":50,"time":1750905496785,"pid":2928831,"hostname":"local","error":{"message":"(CustomError) Test error message","stack":["Error: Test error message","at Object.<anonymous> (test.js:1:1)"]}}
+[0m[32m✓[0m [0mLogger[2m > [0mComprehensive Hook Method Coverage[2m >[0m[1m should handle error as first argument with formatting[0m [0m[2m[4.98ms[0m[2m][0m
+{"level":30,"time":1750905496790,"pid":2928831,"hostname":"local","userId":"123","msg":"User logged in"}
+[0m[32m✓[0m [0mLogger[2m > [0mComprehensive Hook Method Coverage[2m >[0m[1m should handle object with multiple string arguments[0m [0m[2m[1.09ms[0m[2m][0m
+{"level":50,"time":1750905496801,"pid":2928831,"hostname":"local","message":"(Error) Second error","stack":["Error: Second error","at <anonymous> (/home/markmur88/eliza/packages/core/src/__tests__/logger.test.ts:258:26)"],"msg":"Multiple errors:"}
+[0m[32m✓[0m [0mLogger[2m > [0mComprehensive Hook Method Coverage[2m >[0m[1m should handle string with error in rest arguments[0m [0m[2m[[1m11.23ms[0m[2m][0m
+{"level":30,"time":1750905496802,"pid":2928831,"hostname":"local","active":true,"msg":"Status: for user"}
+[0m[32m✓[0m [0mLogger[2m > [0mComprehensive Hook Method Coverage[2m >[0m[1m should handle mixed object and string arguments[0m [0m[2m[7.25ms[0m[2m][0m
+{"level":30,"time":1750905496810,"pid":2928831,"hostname":"local","0":"array","1":"data","complex":{"nested":true},"msg":"Data:"}
+[0m[32m✓[0m [0mLogger[2m > [0mComprehensive Hook Method Coverage[2m >[0m[1m should handle non-string, non-error objects in arguments[0m [0m[2m[1.17ms[0m[2m][0m
+{"level":50,"time":1750905496876,"pid":2928831,"hostname":"local","error":{"message":"(Error) Sentry test","stack":["Error: Sentry test","at <anonymous> (/home/markmur88/eliza/packages/core/src/__tests__/logger.test.ts:285:25)"]}}
+{"level":50,"time":1750905496878,"pid":2928831,"hostname":"local","message":"(Error) Sentry test","stack":["Error: Sentry test","at <anonymous> (/home/markmur88/eliza/packages/core/src/__tests__/logger.test.ts:285:25)"],"msg":"Message with error:"}
+[0m[32m✓[0m [0mLogger[2m > [0mComprehensive Hook Method Coverage[2m >[0m[1m should handle Sentry exception capture for errors[0m [0m[2m[[1m68.77ms[0m[2m][0m
+{"level":30,"time":1750905496881,"pid":2928831,"hostname":"local","a":1,"b":2,"c":3,"msg":"Combined object log"}
+{"level":30,"time":1750905496882,"pid":2928831,"hostname":"local","a":1,"b":2,"msg":"Objects:"}
+[0m[32m✓[0m [0mLogger[2m > [0mComprehensive Hook Method Coverage[2m >[0m[1m should handle all argument being non-string objects[0m [0m[2m[5.55ms[0m[2m][0m
+[0m[32m✓[0m [0mLogger[2m > [0mComprehensive Hook Method Coverage[2m >[0m[1m should handle logger clear method when destination exists[0m [0m[2m[1.44ms[0m[2m][0m
+{"level":30,"time":1750905496890,"pid":2928831,"hostname":"local","msg":"Simple text that might not be JSON"}
+[0m[32m✓[0m [0mLogger[2m > [0mInMemoryDestination Coverage[2m >[0m[1m should handle non-JSON string data in write method[0m [0m[2m[1.78ms[0m[2m][0m
+[0m[32m✓[0m [0mLogger[2m > [0mInMemoryDestination Coverage[2m >[0m[1m should handle diagnostic mode with filtered logs[0m [0m[2m[[1m15.76ms[0m[2m][0m
+{"level":30,"time":1750905497011,"pid":2928831,"hostname":"local","msg":"Async logger test"}
+[0m[32m✓[0m [0mLogger[2m > [0mAsync Stream Creation[2m >[0m[1m should handle async stream creation when require fails[0m [0m[2m[[1m104.95ms[0m[2m][0m
+[0m[32m✓[0m [0mLogger[2m > [0mAsync Stream Creation[2m >[0m[1m should handle pino-pretty module not having default export[0m [0m[2m[1.88ms[0m[2m][0m
+[0m[32m✓[0m [0mLogger[2m > [0mAdditional Custom Level Tests[2m >[0m[1m should use custom log levels[0m [0m[2m[1.63ms[0m[2m][0m
+{"level":30,"time":1750905497017,"pid":2928831,"hostname":"local","msg":"Test with potential undefined level"}
+[0m[32m✓[0m [0mLogger[2m > [0mCustom Prettifier Edge Cases[2m >[0m[1m should handle undefined level in prettifier[0m [0m[2m[0.91ms[0m[2m][0m
+{"level":30,"time":1750905497020,"pid":2928831,"hostname":"local","msg":"Test"}
+[0m[32m✓[0m [0mLogger[2m > [0mCustom Prettifier Edge Cases[2m >[0m[1m should handle null level in prettifier[0m [0m[2m[1.96ms[0m[2m][0m
+{"level":30,"time":1750905497021,"pid":2928831,"hostname":"local","msg":"Test with numeric level"}
+[0m[32m✓[0m [0mLogger[2m > [0mCustom Prettifier Edge Cases[2m >[0m[1m should handle object level data in prettifier[0m [0m[2m[1.07ms[0m[2m][0m
+[0m
+src/__tests__/env.test.ts:
+Path /home/markmur88/eliza/packages/core/.env.test exists: true
+Path /home/markmur88/eliza/packages/core/packages/core/.env.test exists: false
+Path /home/markmur88/eliza/packages/core/.env.test exists: true
+Path /home/markmur88/eliza/packages/core/src/.env.test exists: false
+Path /home/markmur88/eliza/packages/core/src/__tests__/.env.test exists: false
+[0m[32m✓[0m [0mEnvironment Setup[2m >[0m[1m should verify .env.test file exists[0m [0m[2m[[1m29.58ms[0m[2m][0m
+[0m
+src/__tests__/parsing.test.ts:
+[0m[32m✓[0m [0mParsing Module[2m > [0mparseBooleanFromText[2m >[0m[1m should parse exact YES/NO matches[0m [0m[2m[7.70ms[0m[2m][0m
+[0m[32m✓[0m [0mParsing Module[2m > [0mparseBooleanFromText[2m >[0m[1m should handle case insensitive input[0m [0m[2m[0.66ms[0m[2m][0m
+[0m[32m✓[0m [0mParsing Module[2m > [0mparseBooleanFromText[2m >[0m[1m should return null for invalid input[0m [0m[2m[0.27ms[0m[2m][0m
+[0m[32m✓[0m [0mParsing Module[2m > [0mparseJSONObjectFromText[2m >[0m[1m should parse JSON object from code block[0m [0m[2m[0.24ms[0m[2m][0m
+[0m[32m✓[0m [0mParsing Module[2m > [0mparseJSONObjectFromText[2m >[0m[1m should parse JSON object without code block[0m [0m[2m[0.13ms[0m[2m][0m
+[0m[32m✓[0m [0mParsing Module[2m > [0mparseJSONObjectFromText[2m >[0m[1m should parse JSON objects containing array values[0m [0m[2m[0.66ms[0m[2m][0m
+[0m[32m✓[0m [0mParsing Module[2m > [0mparseJSONObjectFromText[2m >[0m[1m should handle empty objects[0m [0m[2m[0.94ms[0m[2m][0m
+[0m[32m✓[0m [0mParsing Module[2m > [0mparseJSONObjectFromText[2m >[0m[1m should return null for invalid JSON[0m [0m[2m[0.24ms[0m[2m][0m
+[0m
+src/specs/v2/__tests__/roles.test.ts:
+[0m[32m✓[0m [0mroles utilities[2m >[0m[1m getUserServerRole returns role from world metadata[0m [0m[2m[3.47ms[0m[2m][0m
+[0m[32m✓[0m [0mroles utilities[2m >[0m[1m findWorldsForOwner finds owned worlds[0m [0m[2m[1.04ms[0m[2m][0m
+[0m
+src/specs/v2/__tests__/messages.test.ts:
+[0m[32m✓[0m [0mMessages Library[2m >[0m[1m formatEntities should format entities into a readable string[0m [0m[2m[0.34ms[0m[2m][0m
+[0m[32m✓[0m [0mMessages Library[2m >[0m[1m formatMessages should format messages into a readable string[0m [0m[2m[0.40ms[0m[2m][0m
+[0m[32m✓[0m [0mMessages Library[2m >[0m[1m formatTimestamp should return correct time string[0m [0m[2m[0.19ms[0m[2m][0m
+[0m[32m✓[0m [0mMessages Library[2m >[0m[1m formatMessages should include attachments if present[0m [0m[2m[0.32ms[0m[2m][0m
+[0m[32m✓[0m [0mMessages Library[2m >[0m[1m formatMessages should handle empty attachments gracefully[0m [0m[2m[0.35ms[0m[2m][0m
+[0m[32m✓[0m [0mMessages[2m > [0mformatEntities[2m >[0m[1m should format entities with complete details[0m [0m[2m[0.13ms[0m[2m][0m
+[0m[32m✓[0m [0mMessages[2m > [0mformatEntities[2m >[0m[1m should handle entities without details[0m [0m[2m[0.19ms[0m[2m][0m
+[0m[32m✓[0m [0mMessages[2m > [0mformatEntities[2m >[0m[1m should handle empty entities array[0m [0m[2m[0.09ms[0m[2m][0m
+[0m[32m✓[0m [0mMessages[2m > [0mformatMessages[2m >[0m[1m should handle messages from unknown users[0m [0m[2m[0.31ms[0m[2m][0m
+[0m[32m✓[0m [0mMessages[2m > [0mformatMessages[2m >[0m[1m should handle messages with no action[0m [0m[2m[0.25ms[0m[2m][0m
+[0m[32m✓[0m [0mMessages[2m > [0mformatMessages[2m >[0m[1m should handle empty messages array[0m [0m[2m[0.11ms[0m[2m][0m
+[0m[32m✓[0m [0mMessages[2m > [0mformatTimestamp[2m >[0m[1m should handle exact time boundaries[0m [0m[2m[0.14ms[0m[2m][0m
+[0m
+src/specs/v2/__tests__/utils-prompt.test.ts:
+[0m[32m✓[0m [0mprompt utilities[2m >[0m[1m composePrompt inserts state values[0m [0m[2m[3.99ms[0m[2m][0m
+[0m[32m✓[0m [0mprompt utilities[2m >[0m[1m composePromptFromState flattens state values[0m [0m[2m[4.83ms[0m[2m][0m
+[0m[32m✓[0m [0mprompt utilities[2m >[0m[1m formatPosts formats conversation text[0m [0m[2m[0.86ms[0m[2m][0m
+[0m[32m✓[0m [0mprompt utilities[2m >[0m[1m trimTokens truncates using runtime tokenizer[0m [0m[2m[1.28ms[0m[2m][0m
+[0m
+src/specs/v2/__tests__/database.test.ts:
+[0m[32m✓[0m [0mDatabaseAdapter Tests[2m >[0m[1m should return memories by room ID[0m [0m[2m[2.33ms[0m[2m][0m
+[0m[32m✓[0m [0mDatabaseAdapter Tests[2m >[0m[1m should return cached embeddings[0m [0m[2m[1.70ms[0m[2m][0m
+[0m[32m✓[0m [0mDatabaseAdapter Tests[2m >[0m[1m should search memories based on embedding[0m [0m[2m[0.52ms[0m[2m][0m
+[0m[32m✓[0m [0mDatabaseAdapter Tests[2m >[0m[1m should get an account by user ID[0m [0m[2m[1.78ms[0m[2m][0m
+[0m[32m✓[0m [0mDatabaseAdapter Tests[2m >[0m[1m should create a new account[0m [0m[2m[0.74ms[0m[2m][0m
+[0m[32m✓[0m [0mDatabaseAdapter Tests[2m >[0m[1m should return entities by room ID[0m [0m[2m[0.34ms[0m[2m][0m
+[0m
+src/specs/v2/__tests__/settings.test.ts:
+[0m[32m✓[0m [0msettings utilities[2m >[0m[1m createSettingFromConfig copies fields[0m [0m[2m[4.75ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m >[0m[1m encrypt/decrypt round trip[0m [0m[2m[0.97ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m >[0m[1m salt and unsalt setting value[0m [0m[2m[0.72ms[0m[2m][0m
+[0m[32m✓[0m [0msettings utilities[2m >[0m[1m salt and unsalt world settings[0m [0m[2m[0.54ms[0m[2m][0m
+[0m
+src/specs/v2/__tests__/search.test.ts:
+[2025-06-26 02:38:16.904 +0000] [32mINFO[39m: [36mregistered successfully[39m
+    agentName: "test"
+    agentId: "123"
+[2025-06-26 02:38:16.907 +0000] [32mINFO[39m: [36mRegistering service[39m
+    agentName: "test"
+    agentId: "123"
+[0m[32m✓[0m [0mBM25 search[2m >[0m[1m indexes documents and finds matches[0m [0m[2m[4.83ms[0m[2m][0m
+[0m
+src/specs/v2/__tests__/runtime.test.ts:
+runtime.plugins [
+  {
+    [0mname[2m:[0m [0m[32m[0m[32m"TestPlugin"[0m[0m[0m[2m,[0m
+    [0mdescription[2m:[0m [0m[32m[0m[32m"A test plugin"[0m[0m[0m[2m,[0m
+    [0minit[2m:[0m [0m[2mundefined[0m[0m[2m,[0m
+  }
+]
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mPlugin Registration[2m >[0m[1m should register a simple plugin[0m [0m[2m[3.47ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mPlugin Registration[2m >[0m[1m should call plugin init function[0m [0m[2m[1.63ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mPlugin Registration[2m >[0m[1m should register plugin features (actions, providers, models) when initialized[0m [0m[2m[[1m21.55ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mInitialization[2m >[0m[1m should call the core runtime initialize method[0m [0m[2m[3.51ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mInitialization[2m >[0m[1m should throw if adapter is not available during initialize[0m [0m[2m[7.58ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mState Composition[2m >[0m[1m should call provider get methods[0m [0m[2m[5.86ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mState Composition[2m >[0m[1m should filter providers[0m [0m[2m[3.64ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mModel Usage[2m >[0m[1m should call registered model handler[0m [0m[2m[1.77ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mModel Usage[2m >[0m[1m should throw if model type is not registered[0m [0m[2m[0.51ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mAction Processing[2m >[0m[1m should find and execute the correct action handler[0m [0m[2m[[1m33.10ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mAction Processing[2m >[0m[1m should not execute if no action name matches[0m [0m[2m[0.90ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mAdapter Passthrough[2m >[0m[1m createEntity should call adapter.createEntities[0m [0m[2m[0.82ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mAdapter Passthrough[2m >[0m[1m getMemoryById should call adapter.getMemoryById[0m [0m[2m[[1m17.44ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mEvent Emitter (on/emit/off)[2m >[0m[1m should register and emit events[0m [0m[2m[[1m10.19ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mEvent Emitter (on/emit/off)[2m >[0m[1m should remove event handler with off[0m [0m[2m[0.29ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mOriginal Suite Tests[2m > [0mmodel provider management[2m >[0m[1m should provide access to the configured model provider[0m [0m[2m[0.17ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mOriginal Suite Tests[2m > [0mstate management[2m >[0m[1m should compose state with additional keys[0m [0m[2m[[1m15.13ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mOriginal Suite Tests[2m > [0maction management[2m >[0m[1m should register an action[0m [0m[2m[0.37ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m > [0mOriginal Suite Tests[2m > [0maction management[2m >[0m[1m should allow registering multiple actions[0m [0m[2m[0.40ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m >[0m[1m should construct without errors[0m [0m[2m[0.29ms[0m[2m][0m
+[0m[32m✓[0m [0mAgentRuntime (Non-Instrumented Baseline)[2m >[0m[1m should register database adapter via constructor[0m [0m[2m[0.14ms[0m[2m][0m
+[0m
+src/specs/v2/__tests__/actions.test.ts:
+[0m[32m✓[0m [0mActions[2m > [0mcomposeActionExamples[2m >[0m[1m should generate examples with correct format[0m [0m[2m[3.17ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mcomposeActionExamples[2m >[0m[1m should replace name placeholders with generated names[0m [0m[2m[0.28ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mcomposeActionExamples[2m >[0m[1m should handle empty actions array[0m [0m[2m[0.12ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mcomposeActionExamples[2m >[0m[1m should handle count larger than available examples[0m [0m[2m[2.30ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mformatActionNames[2m >[0m[1m should format action names correctly[0m [0m[2m[0.53ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mformatActionNames[2m >[0m[1m should handle single action[0m [0m[2m[0.10ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mformatActionNames[2m >[0m[1m should handle empty actions array[0m [0m[2m[0.09ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mformatActions[2m >[0m[1m should format actions with descriptions[0m [0m[2m[0.20ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mformatActions[2m >[0m[1m should include commas and newlines between multiple actions[0m [0m[2m[0.17ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mformatActions[2m >[0m[1m should handle empty actions array[0m [0m[2m[0.08ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mAction Structure[2m >[0m[1m should validate action structure[0m [0m[2m[0.26ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mAction Structure[2m >[0m[1m should validate example structure[0m [0m[2m[0.24ms[0m[2m][0m
+[0m[32m✓[0m [0mActions[2m > [0mAction Structure[2m >[0m[1m should have unique action names[0m [0m[2m[0.18ms[0m[2m][0m
+[0m
+src/specs/v2/__tests__/uuid.test.ts:
+[0m[32m✓[0m [0mUUID Module[2m > [0mstringToUuid[2m > [0minput handling[2m >[0m[1m should convert number inputs to strings correctly[0m [0m[2m[0.32ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0mstringToUuid[2m > [0minput handling[2m >[0m[1m should throw TypeError for invalid input types[0m [0m[2m[0.37ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0mstringToUuid[2m > [0minput handling[2m >[0m[1m should handle empty string input[0m [0m[2m[0.27ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0mstringToUuid[2m > [0minput handling[2m >[0m[1m should handle Unicode characters and emojis consistently[0m [0m[2m[0.30ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0mstringToUuid[2m > [0mUUID version and variant bits[2m >[0m[1m should set correct version bits (version 5)[0m [0m[2m[0.18ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0mstringToUuid[2m > [0mUUID version and variant bits[2m >[0m[1m should set correct variant bits (RFC4122)[0m [0m[2m[0.64ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0mstringToUuid[2m > [0mencoding handling[2m >[0m[1m should handle URL-unsafe characters[0m [0m[2m[1.08ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0mstringToUuid[2m > [0mencoding handling[2m >[0m[1m should handle very long inputs[0m [0m[2m[[1m93.33ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0mstringToUuid[2m >[0m[1m should generate a valid UUID matching the standard format[0m [0m[2m[0.31ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0mstringToUuid[2m >[0m[1m should generate consistent UUIDs for identical inputs[0m [0m[2m[6.47ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0mstringToUuid[2m >[0m[1m should generate unique UUIDs for different inputs[0m [0m[2m[[1m40.81ms[0m[2m][0m
+[0m
+src/specs/v2/__tests__/entities-extra.test.ts:
+[0m[32m✓[0m [0mentities extra[2m >[0m[1m createUniqueUuid combines user and agent ids[0m [0m[2m[[1m65.79ms[0m[2m][0m
+[0m[32m✓[0m [0mentities extra[2m >[0m[1m formatEntities outputs joined string[0m [0m[2m[0.28ms[0m[2m][0m
+[0m
+src/specs/v2/__tests__/utils-extra.test.ts:
+[0m[32m✓[0m [0mutils extra[2m >[0m[1m addHeader prepends header when body exists[0m [0m[2m[[1m32.63ms[0m[2m][0m
+[0m[32m✓[0m [0mutils extra[2m >[0m[1m parseKeyValueXml parses simple xml block[0m [0m[2m[0.57ms[0m[2m][0m
+[0m[32m✓[0m [0mutils extra[2m >[0m[1m safeReplacer handles circular objects[0m [0m[2m[0.30ms[0m[2m][0m
+[0m[32m✓[0m [0mutils extra[2m >[0m[1m validateUuid validates correct uuid and rejects bad values[0m [0m[2m[0.74ms[0m[2m][0m
+[0m
+src/specs/v2/__tests__/env.test.ts:
+Path /home/markmur88/eliza/packages/core/.env.test exists: true
+Path /home/markmur88/eliza/packages/core/packages/core/.env.test exists: false
+Path /home/markmur88/eliza/packages/core/src/specs/.env.test exists: false
+Path /home/markmur88/eliza/packages/core/src/specs/v2/.env.test exists: false
+Path /home/markmur88/eliza/packages/core/src/specs/v2/__tests__/.env.test exists: false
+[0m[32m✓[0m [0mEnvironment Setup[2m >[0m[1m should verify .env.test file exists[0m [0m[2m[[1m34.67ms[0m[2m][0m
+[0m
+src/specs/v2/__tests__/parsing.test.ts:
+[0m[32m✓[0m [0mParsing Module[2m > [0mparseBooleanFromText[2m >[0m[1m should parse exact YES/NO matches[0m [0m[2m[0.13ms[0m[2m][0m
+[0m[32m✓[0m [0mParsing Module[2m > [0mparseBooleanFromText[2m >[0m[1m should handle case insensitive input[0m [0m[2m[0.03ms[0m[2m][0m
+[0m[32m✓[0m [0mParsing Module[2m > [0mparseBooleanFromText[2m >[0m[1m should return null for invalid input[0m [0m[2m[0.03ms[0m[2m][0m
+[0m[32m✓[0m [0mParsing Module[2m > [0mparseJSONObjectFromText[2m >[0m[1m should parse JSON object from code block[0m [0m[2m[0.16ms[0m[2m][0m
+[0m[32m✓[0m [0mParsing Module[2m > [0mparseJSONObjectFromText[2m >[0m[1m should parse JSON object without code block[0m [0m[2m[0.05ms[0m[2m][0m
+[0m[32m✓[0m [0mParsing Module[2m > [0mparseJSONObjectFromText[2m >[0m[1m should parse JSON objects containing array values[0m [0m[2m[0.06ms[0m[2m][0m
+[0m[32m✓[0m [0mParsing Module[2m > [0mparseJSONObjectFromText[2m >[0m[1m should handle empty objects[0m [0m[2m[0.12ms[0m[2m][0m
+[0m[32m✓[0m [0mParsing Module[2m > [0mparseJSONObjectFromText[2m >[0m[1m should return null for invalid JSON[0m [0m[2m[0.12ms[0m[2m][0m
+[0m
+src/specs/v1/__tests__/integration.test.ts:
+result {
+  [0mtext[2m:[0m [0m[32m[0m[32m"Provider processed state: Original state"[0m[0m[0m[2m,[0m
+  [0mwalletBalance[2m:[0m [0m[33m123.45[0m[0m[2m,[0m
+  [0muserInfo[2m:[0m {
+    [0mname[2m:[0m [0m[32m[0m[32m"Test User"[0m[0m[0m[2m,[0m
+  }[0m[2m,[0m
+  [0mvalues[2m:[0m {}[0m[2m,[0m
+  [0mdata[2m:[0m {}[0m[2m,[0m
+}
+[0m[32m✓[0m [0mIntegration tests for v1 compatibility layer[2m >[0m[1m should process a v1 state through a v2 provider and back[0m [0m[2m[[1m45.60ms[0m[2m][0m
+[0m[32m✓[0m [0mIntegration tests for v1 compatibility layer[2m >[0m[1m should process ActionExample through v1->v2->v1 conversion[0m [0m[2m[[1m14.42ms[0m[2m][0m
+[0m[32m✓[0m [0mIntegration tests for v1 compatibility layer[2m >[0m[1m should process templates with state correctly[0m [0m[2m[0.43ms[0m[2m][0m
+[0m
+src/specs/v1/__tests__/templates.test.ts:
+[0m[32m✓[0m [0mTemplates Module[2m > [0mTemplateType[2m >[0m[1m should allow string templates[0m [0m[2m[0.09ms[0m[2m][0m
+[0m[32m✓[0m [0mTemplates Module[2m > [0mTemplateType[2m >[0m[1m should allow function templates[0m [0m[2m[0.17ms[0m[2m][0m
+[0m[32m✓[0m [0mTemplates Module[2m > [0mcreateTemplateFunction[2m >[0m[1m should handle string templates[0m [0m[2m[[1m17.30ms[0m[2m][0m
+[0m[32m✓[0m [0mTemplates Module[2m > [0mcreateTemplateFunction[2m >[0m[1m should handle function templates[0m [0m[2m[0.39ms[0m[2m][0m
+[0m[32m✓[0m [0mTemplates Module[2m > [0mcreateTemplateFunction[2m >[0m[1m should handle null/undefined state[0m [0m[2m[0.17ms[0m[2m][0m
+[0m[32m✓[0m [0mTemplates Module[2m > [0mprocessTemplate[2m >[0m[1m should process string templates[0m [0m[2m[0.93ms[0m[2m][0m
+[0m[32m✓[0m [0mTemplates Module[2m > [0mprocessTemplate[2m >[0m[1m should process function templates[0m [0m[2m[0.24ms[0m[2m][0m
+[0m[32m✓[0m [0mTemplates Module[2m > [0mprocessTemplate[2m >[0m[1m should handle null/undefined templates[0m [0m[2m[0.13ms[0m[2m][0m
+[0m[32m✓[0m [0mTemplates Module[2m > [0mprocessTemplate[2m >[0m[1m should handle null/undefined state[0m [0m[2m[0.18ms[0m[2m][0m
+[0m[32m✓[0m [0mTemplates Module[2m > [0mgetTemplateValues[2m >[0m[1m should provide type-safe access to state values[0m [0m[2m[0.41ms[0m[2m][0m
+[0m[32m✓[0m [0mTemplates Module[2m > [0mgetTemplateValues[2m >[0m[1m should apply default values when properties are missing[0m [0m[2m[1.23ms[0m[2m][0m
+[0m[32m✓[0m [0mTemplates Module[2m > [0mgetTemplateValues[2m >[0m[1m should handle null/undefined state[0m [0m[2m[0.14ms[0m[2m][0m
+[0m[32m✓[0m [0mTemplates Module[2m > [0mgetTemplateValues[2m >[0m[1m should handle null/undefined values in state[0m [0m[2m[0.16ms[0m[2m][0m
+[0m[32m✓[0m [0mTemplates Module[2m > [0mIntegration[2m >[0m[1m should use getTemplateValues with processTemplate[0m [0m[2m[0.33ms[0m[2m][0m
+[0m
+src/specs/v1/__tests__/state.test.ts:
+[2025-06-26 02:38:17.440 +0000] [31mERROR[39m: [36mNo action found for: NonExistentAction[39m
+    agentName: "Test Character"
+    logLevel: "info"
+[2025-06-26 02:38:17.253 +0000] [32mINFO[39m: [36mRunning plugin migrations...[39m
+    agentName: "Test Character"
+    logLevel: "info"
+[2025-06-26 02:38:17.253 +0000] [32mINFO[39m: [36mFound 0 plugins with schemas to migrate.[39m
+    agentName: "Test Character"
+    logLevel: "info"
+[2025-06-26 02:38:17.253 +0000] [32mINFO[39m: [36mPlugin migrations completed.[39m
+    agentName: "Test Character"
+    logLevel: "info"
+[2025-06-26 02:38:17.255 +0000] [33mWARN[39m: [36m[AgentRuntime][Test Character] No TEXT_EMBEDDING model registered. Skipping embedding dimension setup.[39m
+    agentName: "Test Character"
+    logLevel: "info"
+[0m[32m✓[0m [0mState adapter[2m >[0m[1m should convert from v2 state to v1 state correctly[0m [0m[2m[[1m64.92ms[0m[2m][0m
+[0m[32m✓[0m [0mState adapter[2m >[0m[1m should convert from v1 state to v2 state correctly[0m [0m[2m[0.45ms[0m[2m][0m
+[0m[32m✓[0m [0mState adapter[2m >[0m[1m should handle empty or undefined values[0m [0m[2m[0.24ms[0m[2m][0m
+[0m[32m✓[0m [0mState adapter[2m >[0m[1m should handle additional properties from real-world plugins[0m [0m[2m[0.33ms[0m[2m][0m
+[0m
+src/specs/v1/__tests__/actionExample.test.ts:
+[0m[32m✓[0m [0mActionExample Module[2m > [0mconvertContentToV1[2m >[0m[1m should convert V2 content to V1 content[0m [0m[2m[0.45ms[0m[2m][0m
+[0m[32m✓[0m [0mActionExample Module[2m > [0mconvertContentToV1[2m >[0m[1m should handle empty actions array[0m [0m[2m[0.18ms[0m[2m][0m
+[0m[32m✓[0m [0mActionExample Module[2m > [0mconvertContentToV1[2m >[0m[1m should handle null or undefined content[0m [0m[2m[0.10ms[0m[2m][0m
+[0m[32m✓[0m [0mActionExample Module[2m > [0mconvertContentToV2[2m >[0m[1m should convert V1 content to V2 content[0m [0m[2m[1.84ms[0m[2m][0m
+[0m[32m✓[0m [0mActionExample Module[2m > [0mconvertContentToV2[2m >[0m[1m should handle undefined action field[0m [0m[2m[0.17ms[0m[2m][0m
+[0m[32m✓[0m [0mActionExample Module[2m > [0mconvertContentToV2[2m >[0m[1m should handle null or undefined content[0m [0m[2m[0.13ms[0m[2m][0m
+[0m[32m✓[0m [0mActionExample Module[2m > [0mfromV2ActionExample[2m >[0m[1m should convert v2 ActionExample to v1 ActionExample[0m [0m[2m[[1m49.14ms[0m[2m][0m
+[0m[32m✓[0m [0mActionExample Module[2m > [0mfromV2ActionExample[2m >[0m[1m should handle v2 example with minimal content[0m [0m[2m[0.31ms[0m[2m][0m
+[0m[32m✓[0m [0mActionExample Module[2m > [0mfromV2ActionExample[2m >[0m[1m should handle empty strings and arrays[0m [0m[2m[0.34ms[0m[2m][0m
+[0m[32m✓[0m [0mActionExample Module[2m > [0mfromV2ActionExample[2m >[0m[1m should handle null or undefined example[0m [0m[2m[0.15ms[0m[2m][0m
+[0m[32m✓[0m [0mActionExample Module[2m > [0mtoV2ActionExample[2m >[0m[1m should convert v1 ActionExample to v2 ActionExample[0m [0m[2m[0.18ms[0m[2m][0m
+[0m[32m✓[0m [0mActionExample Module[2m > [0mtoV2ActionExample[2m >[0m[1m should handle v1 example with minimal content[0m [0m[2m[0.17ms[0m[2m][0m
+[0m[32m✓[0m [0mActionExample Module[2m > [0mtoV2ActionExample[2m >[0m[1m should handle complex content structures[0m [0m[2m[0.29ms[0m[2m][0m
+[0m[32m✓[0m [0mActionExample Module[2m > [0mtoV2ActionExample[2m >[0m[1m should handle null or undefined example[0m [0m[2m[0.14ms[0m[2m][0m
+[0m[32m✓[0m [0mActionExample Module[2m > [0mActionExample type[2m >[0m[1m should match the expected structure[0m [0m[2m[0.11ms[0m[2m][0m
+[0m
+src/specs/v1/__tests__/uuid.test.ts:
+[0m[32m✓[0m [0mUUID Module[2m > [0mUUID Type[2m >[0m[1m should define UUID as a string type with specific format[0m [0m[2m[0.11ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0masUUID function[2m >[0m[1m should accept valid UUIDs and normalize to lowercase[0m [0m[2m[0.50ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0masUUID function[2m >[0m[1m should reject invalid UUIDs[0m [0m[2m[3.93ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0masUUID function[2m >[0m[1m should convert uppercase UUIDs to lowercase[0m [0m[2m[0.17ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0masUUID function[2m >[0m[1m should return a branded UUID type[0m [0m[2m[0.12ms[0m[2m][0m
+[0m[32m✓[0m [0mUUID Module[2m > [0masUUID function[2m >[0m[1m should handle UUIDs with version and variant bits correctly[0m [0m[2m[0.14ms[0m[2m][0m
+[0m
+src/specs/v1/__tests__/provider.test.ts:
+[0m[32m✓[0m [0mProvider adapter[2m >[0m[1m should convert from v2 provider to v1 provider correctly[0m [0m[2m[0.57ms[0m[2m][0m
+[0m[32m✓[0m [0mProvider adapter[2m >[0m[1m should convert from v1 provider to v2 provider correctly[0m [0m[2m[0.57ms[0m[2m][0m
+[0m[32m✓[0m [0mProvider adapter[2m >[0m[1m should handle unnamed v1 providers properly[0m [0m[2m[0.27ms[0m[2m][0m
+[0m[32m✓[0m [0mProvider adapter[2m >[0m[1m should handle state conversion when passing to v2 provider[0m [0m[2m[[1m45.51ms[0m[2m][0m
+[0m[32m✓[0m [0mProvider adapter[2m >[0m[1m should handle real-world provider example (TON wallet provider)[0m [0m[2m[1.60ms[0m[2m][0m
+[0m[32m✓[0m [0mProvider adapter[2m >[0m[1m should handle primitive results from V1 providers[0m [0m[2m[1.75ms[0m[2m][0m
+[0m[32m✓[0m [0mProvider adapter[2m >[0m[1m should handle null or undefined results[0m [0m[2m[0.64ms[0m[2m][0m
+[0m[2m-------------------------------|---------|---------|-------------------[0m
+File                           [2m|[0m % Funcs [2m|[0m % Lines [2m|[0m Uncovered Line #s
+[2m-------------------------------|---------|---------|-------------------[0m
+[0m[1m[31mAll files                     [0m[2m | [0m[1m[31m  67.22[0m[2m | [0m[1m[31m  77.90[0m[2m |[0m
+[0m[1m[31m dist/chunk-2HSL25IJ.js       [0m[2m | [0m[1m[31m   0.00[0m[2m | [0m[1m[31m   7.69[0m[2m | [0m[31m1-9[0m[2m,[0m[31m14-23[0m[2m,[0m[31m27-32
+[0m[1m[31m dist/chunk-JX2SRFHQ.js       [0m[2m | [0m[1m[31m   0.00[0m[2m | [0m[1m[31m   6.25[0m[2m | [0m[31m6-22[0m[2m,[0m[31m25-52
+[0m[1m[31m dist/chunk-LACDKYHQ.js       [0m[2m | [0m[1m[31m   5.53[0m[2m | [0m[1m[31m  20.09[0m[2m | [0m[31m127-130[0m[2m,[0m[31m271-279[0m[2m,[0m[31m282[0m[2m,[0m[31m285[0m[2m,[0m[31m288[0m[2m,[0m[31m291[0m[2m,[0m[31m294[0m[2m,[0m[31m297[0m[2m,[0m[31m300[0m[2m,[0m[31m303[0m[2m,[0m[31m306[0m[2m,[0m[31m309-319[0m[2m,[0m[31m331-341[0m[2m,[0m[31m347-381[0m[2m,[0m[31m384[0m[2m,[0m[31m387[0m[2m,[0m[31m397[0m[2m,[0m[31m403-406[0m[2m,[0m[31m427-435[0m[2m,[0m[31m438[0m[2m,[0m[31m441[0m[2m,[0m[31m444[0m[2m,[0m[31m447[0m[2m,[0m[31m450[0m[2m,[0m[31m453[0m[2m,[0m[31m456[0m[2m,[0m[31m459[0m[2m,[0m[31m522-532[0m[2m,[0m[31m536[0m[2m,[0m[31m539-549[0m[2m,[0m[31m640-641[0m[2m,[0m[31m665-666[0m[2m,[0m[31m676-677[0m[2m,[0m[31m731-772[0m[2m,[0m[31m780[0m[2m,[0m[31m788[0m[2m,[0m[31m833-856[0m[2m,[0m[31m860[0m[2m,[0m[31m866-870[0m[2m,[0m[31m878-919[0m[2m,[0m[31m925-939[0m[2m,[0m[31m950-957[0m[2m,[0m[31m967-970[0m[2m,[0m[31m979-989[0m[2m,[0m[31m992-998[0m[2m,[0m[31m1001-1013[0m[2m,[0m[31m1016-1018[0m[2m,[0m[31m1021-1029[0m[2m,[0m[31m1032-1071[0m[2m,[0m[31m1074-1096[0m[2m,[0m[31m1099-1115[0m[2m,[0m[31m1119-1158[0m[2m,[0m[31m1161-1175[0m[2m,[0m[31m1178-1182[0m[2m,[0m[31m1185-1203[0m[2m,[0m[31m1206-1217[0m[2m,[0m[31m1220-1232[0m[2m,[0m[31m1235-1243[0m[2m,[0m[31m1247-1257[0m[2m,[0m[31m1261-1262[0m[2m,[0m[31m1297-1303[0m[2m,[0m[31m1367-1380[0m[2m,[0m[31m1383-1392[0m[2m,[0m[31m1396[0m[2m,[0m[31m1402-1426[0m[2m,[0m[31m1429-1444[0m[2m,[0m[31m1447-1448[0m[2m,[0m[31m1451-1452[0m[2m,[0m[31m1614-1625[0m[2m,[0m[31m1628-1643[0m[2m,[0m[31m1651-1660[0m[2m,[0m[31m1664-1676[0m[2m,[0m[31m1680-1693[0m[2m,[0m[31m1697-1709[0m[2m,[0m[31m1713[0m[2m,[0m[31m1716-2117[0m[2m,[0m[31m2168-2175[0m[2m,[0m[31m2192-2211[0m[2m,[0m[31m2237[0m[2m,[0m[31m2246-2247[0m[2m,[0m[31m2258-2278[0m[2m,[0m[31m2288-2290[0m[2m,[0m[31m2301-2313[0m[2m,[0m[31m2324-2343[0m[2m,[0m[31m2353-2402[0m[2m,[0m[31m2409-2418[0m[2m,[0m[31m2428-2448[0m[2m,[0m[31m2460-2502[0m[2m,[0m[31m2513-2579[0m[2m,[0m[31m2591-2601[0m[2m,[0m[31m2610[0m[2m,[0m[31m2619-2622[0m[2m,[0m[31m2628-2633[0m[2m,[0m[31m2640-2648[0m[2m,[0m[31m2656-2666[0m[2m,[0m[31m2669-2674[0m[2m,[0m[31m2679-2723[0m[2m,[0m[31m2730[0m[2m,[0m[31m2736-2737[0m[2m,[0m[31m2743[0m[2m,[0m[31m2749-2837[0m[2m,[0m[31m2840-2967[0m[2m,[0m[31m2970-2979[0m[2m,[0m[31m2983-2987[0m[2m,[0m[31m2990[0m[2m,[0m[31m2993-2999[0m[2m,[0m[31m3003-3004[0m[2m,[0m[31m3007-3018[0m[2m,[0m[31m3022-3506[0m[2m,[0m[31m3509-3514[0m[2m,[0m[31m3523[0m[2m,[0m[31m3530[0m[2m,[0m[31m3538-3573[0m[2m,[0m[31m3577-3593[0m[2m,[0m[31m3596-3690[0m[2m,[0m[31m3694-3697[0m[2m,[0m[31m3700-3747[0m[2m,[0m[31m3751-3756[0m[2m,[0m[31m3759-4071[0m[2m,[0m[31m4074-4077[0m[2m,[0m[31m4080-4087[0m[2m,[0m[31m4090-4115[0m[2m,[0m[31m4119-4153[0m[2m,[0m[31m4160-4172[0m[2m,[0m[31m4175-4181[0m[2m,[0m[31m4184-4212[0m[2m,[0m[31m4215-4245[0m[2m,[0m[31m4249-4253[0m[2m,[0m[31m4256-4260[0m[2m,[0m[31m4263-4267[0m[2m,[0m[31m4270-4274[0m[2m,[0m[31m4277-4290[0m[2m,[0m[31m4293-4300[0m[2m,[0m[31m4303-4321[0m[2m,[0m[31m4324-4332[0m[2m,[0m[31m4335-4343[0m[2m,[0m[31m4346-4354[0m[2m,[0m[31m4357-4365[0m[2m,[0m[31m4371-4372[0m[2m,[0m[31m4378-4379[0m[2m,[0m[31m4385-4386[0m[2m,[0m[31m4392-4393[0m[2m,[0m[31m4399-4422[0m[2m,[0m[31m4426[0m[2m,[0m[31m4429[0m[2m,[0m[31m4472-4475[0m[2m,[0m[31m4478-4481[0m[2m,[0m[31m4484[0m[2m,[0m[31m4487[0m[2m,[0m[31m4492-4507[0m[2m,[0m[31m4513-4580[0m[2m,[0m[31m4587-4590[0m[2m,[0m[31m4610-4617[0m[2m,[0m[31m4620[0m[2m,[0m[31m4627[0m[2m,[0m[31m4634[0m[2m,[0m[31m4641[0m[2m,[0m[31m4648[0m[2m,[0m[31m4655-4778[0m[2m,[0m[31m4784-4788[0m[2m,[0m[31m4791[0m[2m,[0m[31m4832-4861[0m[2m,[0m[31m4864-4963[0m[2m,[0m[31m4966-4970[0m[2m,[0m[31m4973-5006[0m[2m,[0m[31m5009-5016[0m[2m,[0m[31m5021-5022[0m[2m,[0m[31m5025[0m[2m,[0m[31m5028-5031[0m[2m,[0m[31m5034[0m[2m,[0m[31m5040-5041[0m[2m,[0m[31m5044-5045[0m[2m,[0m[31m5048-5049[0m[2m,[0m[31m5052-5053[0m[2m,[0m[31m5056-5057[0m[2m,[0m[31m5060-5061[0m[2m,[0m[31m5064-5065[0m[2m,[0m[31m5068-5069[0m[2m,[0m[31m5072-5073[0m[2m,[0m[31m5076-5077[0m[2m,[0m[31m5091[0m[2m,[0m[31m5094[0m[2m,[0m[31m5100-5103[0m[2m,[0m[31m5106[0m[2m,[0m[31m5110-5147[0m[2m,[0m[31m5150-5163[0m[2m,[0m[31m5166-5175[0m[2m,[0m[31m5178[0m[2m,[0m[31m5181[0m[2m,[0m[31m5188[0m[2m,[0m[31m5191[0m[2m,[0m[31m5198-5204[0m[2m,[0m[31m5211-5217[0m[2m,[0m[31m5224-5333[0m[2m,[0m[31m5336-5339[0m[2m,[0m[31m5342-5345[0m[2m,[0m[31m5348-5359[0m[2m,[0m[31m5362[0m[2m,[0m[31m5365-5371[0m[2m,[0m[31m5374[0m[2m,[0m[31m5380-5596[0m[2m,[0m[31m5600[0m[2m,[0m[31m5603[0m[2m,[0m[31m5606-5609[0m[2m,[0m[31m5617-5628[0m[2m,[0m[31m5632[0m[2m,[0m[31m5635[0m[2m,[0m[31m5638[0m[2m,[0m[31m5641[0m[2m,[0m[31m5647[0m[2m,[0m[31m5650[0m[2m,[0m[31m5653[0m[2m,[0m[31m5656[0m[2m,[0m[31m5659[0m[2m,[0m[31m5662[0m[2m,[0m[31m5665[0m[2m,[0m[31m5668[0m[2m,[0m[31m5671[0m[2m,[0m[31m5674[0m[2m,[0m[31m5677[0m[2m,[0m[31m5680[0m[2m,[0m[31m5683[0m[2m,[0m[31m5686[0m[2m,[0m[31m5689[0m[2m,[0m[31m5694-5697[0m[2m,[0m[31m5700-5703[0m[2m,[0m[31m5706[0m[2m,[0m[31m5709-5713[0m[2m,[0m[31m5716-5719[0m[2m,[0m[31m5722[0m[2m,[0m[31m5725[0m[2m,[0m[31m5728[0m[2m,[0m[31m5731[0m[2m,[0m[31m5734[0m[2m,[0m[31m5737[0m[2m,[0m[31m5740[0m[2m,[0m[31m5743[0m[2m,[0m[31m5746[0m[2m,[0m[31m5752-5753[0m[2m,[0m[31m5757
+[0m[1m[31m dist/chunk-R5U7XKVJ.js       [0m[2m | [0m[1m[31m  50.00[0m[2m | [0m[1m[31m  70.00[0m[2m | [0m[31m3-5
+[0m[1m[31m dist/chunk-U2ADTLZY.js       [0m[2m | [0m[1m[31m   0.00[0m[2m | [0m[1m[31m   5.56[0m[2m | [0m[31m1-11[0m[2m,[0m[31m14-23[0m[2m,[0m[31m26-32[0m[2m,[0m[31m35-41
+[0m[1m[31m dist/chunk-WO7Z3GE6.js       [0m[2m | [0m[1m[31m  77.78[0m[2m | [0m[1m[32m  92.81[0m[2m | [0m[31m62-64[0m[2m,[0m[31m67-73
+[0m[1m[31m dist/chunk-YIBXLDIR.js       [0m[2m | [0m[1m[31m   0.00[0m[2m | [0m[1m[31m  32.35[0m[2m | [0m[31m11-22[0m[2m,[0m[31m25-35
+[0m[1m[32m dist/index.js                [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[32m src/actions.ts               [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[31m src/database.ts              [0m[2m | [0m[1m[31m   0.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[31m src/entities.ts              [0m[2m | [0m[1m[31m  72.73[0m[2m | [0m[1m[31m  87.82[0m[2m | [0m[31m93-94[0m[2m,[0m[31m102-103[0m[2m,[0m[31m108[0m[2m,[0m[31m188-190[0m[2m,[0m[31m247-249[0m[2m,[0m[31m253[0m[2m,[0m[31m276-279[0m[2m,[0m[31m283-284[0m[2m,[0m[31m353[0m[2m,[0m[31m355[0m[2m,[0m[31m357-360
+[0m[1m[32m src/index.ts                 [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[31m src/logger.ts                [0m[2m | [0m[1m[31m  68.42[0m[2m | [0m[1m[31m  55.08[0m[2m | [0m[31m52-119[0m[2m,[0m[31m128[0m[2m,[0m[31m178-205[0m[2m,[0m[31m209-210[0m[2m,[0m[31m217-222[0m[2m,[0m[31m323-332
+[0m[1m[32m src/prompts.ts               [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[32m src/roles.ts                 [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m  97.50[0m[2m | [0m
+[0m[1m[31m src/runtime.ts               [0m[2m | [0m[1m[31m  34.36[0m[2m | [0m[1m[31m  43.94[0m[2m | [0m[31m51-60[0m[2m,[0m[31m63-68[0m[2m,[0m[31m177-178[0m[2m,[0m[31m185[0m[2m,[0m[31m296-304[0m[2m,[0m[31m440-447[0m[2m,[0m[31m451-460[0m[2m,[0m[31m465-473[0m[2m,[0m[31m477[0m[2m,[0m[31m513[0m[2m,[0m[31m636-957[0m[2m,[0m[31m962-1007[0m[2m,[0m[31m1098-1104[0m[2m,[0m[31m1114[0m[2m,[0m[31m1122[0m[2m,[0m[31m1131-1167[0m[2m,[0m[31m1190-1193[0m[2m,[0m[31m1336-1339[0m[2m,[0m[31m1343-1396[0m[2m,[0m[31m1401-1406[0m[2m,[0m[31m1410-1435[0m[2m,[0m[31m1482-1488[0m[2m,[0m[31m1502-1575[0m[2m,[0m[31m1579-1634[0m[2m,[0m[31m1638-1697[0m[2m,[0m[31m1703-1706[0m[2m,[0m[31m1723-1811[0m[2m,[0m[31m1836-1860[0m[2m,[0m[31m1864-1904
+[0m[1m[32m src/schemas/character.ts     [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[31m src/search.ts                [0m[2m | [0m[1m[31m  51.22[0m[2m | [0m[1m[31m  21.35[0m[2m | [0m[31m54-63[0m[2m,[0m[31m74-86[0m[2m,[0m[31m97-110[0m[2m,[0m[31m121-133[0m[2m,[0m[31m147-151[0m[2m,[0m[31m179-687[0m[2m,[0m[31m815-817[0m[2m,[0m[31m918-948[0m[2m,[0m[31m959-961[0m[2m,[0m[31m973-985[0m[2m,[0m[31m1188-1198[0m[2m,[0m[31m1266-1335[0m[2m,[0m[31m1347-1455[0m[2m,[0m[31m1494[0m[2m,[0m[31m1504-1508[0m[2m,[0m[31m1515-1520[0m[2m,[0m[31m1528-1540
+[0m[1m[32m src/sentry/instrument.ts     [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[32m src/services.ts              [0m[2m | [0m[1m[32m  92.86[0m[2m | [0m[1m[32m  97.83[0m[2m | [0m
+[0m[1m[32m src/settings.ts              [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m  98.55[0m[2m | [0m[31m52[0m[2m,[0m[31m153
+[0m[1m[32m src/specs/index.ts           [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[32m src/specs/v1/actionExample.ts[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[32m src/specs/v1/index.ts        [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[31m src/specs/v1/messages.ts     [0m[2m | [0m[1m[31m   0.00[0m[2m | [0m[1m[31m  35.00[0m[2m | [0m[31m11-17[0m[2m,[0m[31m26-29[0m[2m,[0m[31m39
+[0m[1m[31m src/specs/v1/posts.ts        [0m[2m | [0m[1m[31m   0.00[0m[2m | [0m[1m[31m   9.52[0m[2m | [0m[31m4-22
+[0m[1m[32m src/specs/v1/provider.ts     [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m  90.91[0m[2m | [0m[31m32-33[0m[2m,[0m[31m73-74
+[0m[1m[31m src/specs/v1/runtime.ts      [0m[2m | [0m[1m[31m   0.00[0m[2m | [0m[1m[31m   4.79[0m[2m | [0m[31m26-116[0m[2m,[0m[31m126-129[0m[2m,[0m[31m150-180[0m[2m,[0m[31m184[0m[2m,[0m[31m192[0m[2m,[0m[31m200[0m[2m,[0m[31m208[0m[2m,[0m[31m216[0m[2m,[0m[31m224-390
+[0m[1m[32m src/specs/v1/state.ts        [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[32m src/specs/v1/templates.ts    [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[31m src/specs/v1/types.ts        [0m[2m | [0m[1m[31m  76.47[0m[2m | [0m[1m[32m  90.18[0m[2m | [0m[31m1254-1256[0m[2m,[0m[31m1260-1267
+[0m[1m[31m src/specs/v1/uuid.ts         [0m[2m | [0m[1m[31m  50.00[0m[2m | [0m[1m[31m  87.50[0m[2m | [0m
+[0m[1m[32m src/specs/v2/actions.ts      [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[32m src/specs/v2/database.ts     [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[31m src/specs/v2/entities.ts     [0m[2m | [0m[1m[31m  50.00[0m[2m | [0m[1m[31m  45.83[0m[2m | [0m[31m25-30[0m[2m,[0m[31m53-59
+[0m[1m[32m src/specs/v2/index.ts        [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[31m src/specs/v2/logger.ts       [0m[2m | [0m[1m[31m   0.00[0m[2m | [0m[1m[31m  44.44[0m[2m | [0m[31m22-23[0m[2m,[0m[31m26-27[0m[2m,[0m[31m30-31[0m[2m,[0m[31m34-35[0m[2m,[0m[31m38-39[0m[2m,[0m[31m42-43[0m[2m,[0m[31m46-47[0m[2m,[0m[31m50-51[0m[2m,[0m[31m54-55[0m[2m,[0m[31m58-59
+[0m[1m[32m src/specs/v2/prompts.ts      [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[32m src/specs/v2/roles.ts        [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[31m src/specs/v2/runtime.ts      [0m[2m | [0m[1m[31m  24.31[0m[2m | [0m[1m[31m  16.90[0m[2m | [0m[31m42-46[0m[2m,[0m[31m50[0m[2m,[0m[31m69-94[0m[2m,[0m[31m108-110[0m[2m,[0m[31m151-155[0m[2m,[0m[31m160-163[0m[2m,[0m[31m167[0m[2m,[0m[31m171[0m[2m,[0m[31m179[0m[2m,[0m[31m183[0m[2m,[0m[31m230[0m[2m,[0m[31m247-356[0m[2m,[0m[31m377-381[0m[2m,[0m[31m398-400[0m[2m,[0m[31m419[0m[2m,[0m[31m423-431[0m[2m,[0m[31m435[0m[2m,[0m[31m442-492[0m[2m,[0m[31m497-554[0m[2m,[0m[31m559-777[0m[2m,[0m[31m791-798[0m[2m,[0m[31m807-824[0m[2m,[0m[31m829[0m[2m,[0m[31m833[0m[2m,[0m[31m837
+[0m[1m[31m src/specs/v2/search.ts       [0m[2m | [0m[1m[31m  51.22[0m[2m | [0m[1m[31m  21.35[0m[2m | [0m[31m54-63[0m[2m,[0m[31m74-86[0m[2m,[0m[31m97-110[0m[2m,[0m[31m121-133[0m[2m,[0m[31m147-151[0m[2m,[0m[31m179-687[0m[2m,[0m[31m815-817[0m[2m,[0m[31m918-948[0m[2m,[0m[31m959-961[0m[2m,[0m[31m973-985[0m[2m,[0m[31m1188-1198[0m[2m,[0m[31m1266-1335[0m[2m,[0m[31m1347-1455[0m[2m,[0m[31m1494[0m[2m,[0m[31m1504-1508[0m[2m,[0m[31m1515-1520[0m[2m,[0m[31m1528-1540
+[0m[1m[31m src/specs/v2/services.ts     [0m[2m | [0m[1m[31m   0.00[0m[2m | [0m[1m[31m  35.00[0m[2m | [0m[31m16-18[0m[2m,[0m[31m28-30[0m[2m,[0m[31m47-53
+[0m[1m[31m src/specs/v2/settings.ts     [0m[2m | [0m[1m[31m  53.33[0m[2m | [0m[1m[31m  68.97[0m[2m | [0m[31m100-104[0m[2m,[0m[31m111-114[0m[2m,[0m[31m121-125[0m[2m,[0m[31m135[0m[2m,[0m[31m145[0m[2m,[0m[31m155
+[0m[1m[31m src/specs/v2/types.ts        [0m[2m | [0m[1m[31m  44.44[0m[2m | [0m[1m[31m  68.00[0m[2m | [0m[31m13-16[0m[2m,[0m[31m2097-2112[0m[2m,[0m[31m2144-2147[0m[2m,[0m[31m2156[0m[2m,[0m[31m2165[0m[2m,[0m[31m2174[0m[2m,[0m[31m2183[0m[2m,[0m[31m2192-2196[0m[2m,[0m[31m2214-2216[0m[2m,[0m[31m2223-2225[0m[2m,[0m[31m2235[0m[2m,[0m[31m2242-2253[0m[2m,[0m[31m2418-2420[0m[2m,[0m[31m2433-2441
+[0m[1m[32m src/specs/v2/utils.ts        [0m[2m | [0m[1m[32m  92.86[0m[2m | [0m[1m[32m  98.33[0m[2m | [0m
+[0m[1m[32m src/types/agent.ts           [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[32m src/types/components.ts      [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[32m src/types/database.ts        [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[32m src/types/environment.ts     [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[32m src/types/events.ts          [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[32m src/types/index.ts           [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[32m src/types/knowledge.ts       [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[31m src/types/lp.ts              [0m[2m | [0m[1m[31m   0.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[31m src/types/memory.ts          [0m[2m | [0m[1m[31m  10.00[0m[2m | [0m[1m[31m  30.43[0m[2m | [0m[31m133-148[0m[2m,[0m[31m157[0m[2m,[0m[31m166[0m[2m,[0m[31m175[0m[2m,[0m[31m184[0m[2m,[0m[31m193-197[0m[2m,[0m[31m205-207[0m[2m,[0m[31m214-216
+[0m[1m[32m src/types/messaging.ts       [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[32m src/types/model.ts           [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[32m src/types/plugin.ts          [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[31m src/types/primitives.ts      [0m[2m | [0m[1m[31m  50.00[0m[2m | [0m[1m[31m  63.64[0m[2m | [0m[31m11-14
+[0m[1m[32m src/types/runtime.ts         [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[31m src/types/service.ts         [0m[2m | [0m[1m[31m  20.00[0m[2m | [0m[1m[31m  52.83[0m[2m | [0m[31m128-136[0m[2m,[0m[31m167-170[0m[2m,[0m[31m187-198
+[0m[1m[32m src/types/settings.ts        [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[32m src/types/state.ts           [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[32m src/types/task.ts            [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[32m src/types/tee.ts             [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[32m src/types/testing.ts         [0m[2m | [0m[1m[32m 100.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[31m src/types/token.ts           [0m[2m | [0m[1m[31m   0.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[31m src/types/wallet.ts          [0m[2m | [0m[1m[31m   0.00[0m[2m | [0m[1m[32m 100.00[0m[2m | [0m
+[0m[1m[32m src/utils.ts                 [0m[2m | [0m[1m[32m  95.35[0m[2m | [0m[1m[32m  96.91[0m[2m | [0m[31m208[0m[2m,[0m[31m500[0m[2m,[0m[31m509[0m[2m,[0m[31m667-673
+[0m[2m-------------------------------|---------|---------|-------------------[0m
+
+[0m[32m 456 pass[0m
+[0m[2m 0 fail[0m
+ 1166 expect() calls
+Ran 456 tests across 37 files. [0m[2m[[1m23.57s[0m[2m][0m
